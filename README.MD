@@ -11,10 +11,10 @@ Questa applicazione consente di:
 
 ## Struttura del progetto
 .<br>
-|- index.html
-|- style.css
-|- script.js
-|- README.md
+|- index.html <br>
+|- style.css <br>
+|- script.js <br>
+|- README.md <br>
 
 ---
 
