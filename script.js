@@ -13,4 +13,5 @@ function draw(){
     rect(0, 0, 150, 150, 123);
 
     rect(30, 20, 55, 50, 20, 15, 10, 5); // rect(x, y, size, height, border-radius top-left, top-right, bottom-right, bottom-left)
+    rect(30, 20, 60, 60, 20, 15, 10, 5);
 }
