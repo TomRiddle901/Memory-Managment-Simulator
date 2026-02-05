@@ -11,4 +11,6 @@ function draw(){
     rotateY(frameCount * 0.01); // Rotation Y of rectangle rotateY(frameCount * speed)
     rotateX(frameCount * 0.01); // Rotation X of rectangle rotateX(frameCount * speed)
     rect(0, 0, 150, 150, 123);
+
+    rect(30, 20, 55, 50, 20, 15, 10, 5); // rect(x, y, size, height, border-radius top-left, top-right, bottom-right, bottom-left)
 }
