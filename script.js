@@ -1,9 +1,9 @@
 // Sunrise
 let sunHeight;
-let horizon = 200;
+let horizon = 360;
 
 function setup(){
-    createCanvas(400,400);
+    createCanvas(1280,720);
 }
 
 function draw(){
@@ -18,13 +18,13 @@ function draw(){
 
     // Sun
     fill("yellow");
-    circle(200, sunHeight, 160);
+    circle(640, sunHeight, 160);
 
     // Line of horizon
     stroke("black");
-    line(0, horizon, 400, horizon);
+    line(0, horizon, 1280, horizon);
 
     // Grass
     fill("green");
-    rect(0, horizon, 400, 200);
+    rect(0, horizon, 1280, 720);
 }
