@@ -3,11 +3,17 @@ let sunHeight;
 let horizon = 200;
 
 function setup(){
-    createCanvas(500,500);
+    createCanvas(400,400);
 }
 
 function draw(){
     background(0);
 
     sunHeight = mouseY;
+
+    fill("yellow");
+    circle(200, sunHeight, 160);
+
+    stroke("green");
+    line(0, horizon, 400, horizon);
 }
