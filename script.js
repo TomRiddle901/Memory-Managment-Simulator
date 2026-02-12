@@ -11,9 +11,11 @@ function draw(){
 
     sunHeight = mouseY;
 
+    // Sun
     fill("yellow");
     circle(200, sunHeight, 160);
 
+    // Line of horizon
     stroke("green");
     line(0, horizon, 400, horizon);
 }
