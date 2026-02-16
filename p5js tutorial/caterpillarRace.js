@@ -39,6 +39,8 @@ function draw(){
 
     if (isRacing){
         moveCaterpillars();
+    }else{
+        writeStart();
     }
 
     drawMultipleCaterpillars();
@@ -81,4 +83,9 @@ function moveCaterpillars(){
 
 function mousePressed(){
     isRacing = true;
+}
+
+function writeStart(){
+    text("Click to start!", width / 2, height / 2);
+    textAlign(CENTER);
 }
