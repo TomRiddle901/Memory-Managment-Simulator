@@ -14,7 +14,7 @@ let posCaterpillarEnds = [];
 let isRacing = false;
 
 function setup(){
-    createCanvas(500, 500);
+    createCanvas(700, 500);
 
     // FPS
     frameRate(2);
@@ -44,7 +44,7 @@ function draw(){
     }
 
     drawMultipleCaterpillars();
-    
+
     checkWinner();
 }
 
