@@ -29,7 +29,9 @@ function draw(){
     fill(0, 0, 0);
     rect(startLine, 0, 5, 500);
 
-    drawCaterpillar();
+    drawCaterpillar(circX, circY);
+    drawCaterpillar(circX, circY + 150);
+    drawCaterpillar(circX, circY - 150);
 
     // Srtop simulation when caterpillar reaches finish line
     if (circX > finishLine){
@@ -37,14 +39,12 @@ function draw(){
     }
 }
 
-function drawCaterpillar(){
-    let x = circX;
-
+function drawCaterpillar(x, y){
     // Draw and move the caterpillar main body
     for (let i = 0; i < segments; i++){
         stroke(0);
         fill(255, 0, 255);
-        circle(x, circY, segmentSize);
+        circle(x, y, segmentSize);
         
         x += spacing;
     }
@@ -55,6 +55,6 @@ function drawCaterpillar(){
     fill(0);
     stroke(255);
     strokeWeight(3);
-    circle(x, circY - eyeSize, eyeSize);
-    circle(x - eyeSize, circY - eyeSize, eyeSize);
+    circle(x, y - eyeSize, eyeSize);
+    circle(x - eyeSize, y - eyeSize, eyeSize);
 }
