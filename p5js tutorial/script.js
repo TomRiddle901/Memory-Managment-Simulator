@@ -8,7 +8,7 @@ let redVal = 0;
 
 function setup(){
     createCanvas(1280,720);
-    nostroke(); // Removes shape outlines
+    noStroke();
 }
 
 function draw(){
@@ -25,6 +25,7 @@ function draw(){
     rect(0, horizon, 1280, 720);
 
     mountains();
+    trees();
 
     // Reduce sun height by 2 until it reaches 130
     if (sunHeight > 130){
@@ -64,4 +65,36 @@ function mountains(){
     triangle(650, 400, 1150, 60, 1350, 400);
     fill(150, 150, 150);
     triangle(1600, 400, 1150, 60, 1270, 400);
+}
+
+function trees(){
+    fill(100, 50, 0);
+    rect(100, 300, 20, 100);
+    fill(0, 100, 0);
+    triangle(50, 300, 110, 200, 170, 300);
+
+//    fill(100, 50, 0);
+//    rect(200, 300, 20, 100);
+//    fill(0, 100, 0);
+//    circle(210, 250, 100);
+
+//    fill(100, 50, 0);
+//    rect(300, 300, 20, 100);
+//    fill(0, 100, 0);
+//    triangle(250, 300, 310, 200, 370, 300);
+
+//    fill(100, 50, 0);
+//    rect(450, 300, 20, 100);
+//    fill(0, 100, 0);
+//    circle(460, 250, 100);
+
+//    fill(100, 50, 0);
+//    rect(100, 300, 20, 100);
+//    fill(0, 100, 0);
+//    triangle(50, 300, 110, 200, 170, 300);
+
+//    fill(100, 50, 0);
+//    rect(200, 300, 20, 100);
+//    fill(0, 100, 0);
+//    circle(210, 250, 100);
 }
