@@ -25,7 +25,7 @@ function draw(){
     rect(0, horizon, 1280, 720);
 
     mountains();
-    tree(150, 320, 20);
+    forest();
 
     // Reduce sun height by 2 until it reaches 130
     if (sunHeight > 130){
@@ -72,4 +72,20 @@ function tree(x, y, size){
     rect(x-size, y, size*2, size*6);
     fill(0, 100, 0);
     triangle(x-size*3, y, x, y-size*8, x+size*3, y);
+}
+
+function treeLine(x){
+    let y = -0.7 * x + 450;
+    return y;
+}
+
+function forest(){
+    let x = 150;
+    let y = treeLine(x);
+
+    for (let i = 0; i < 1000; i++){
+        tree(x, y, 10);
+        x += 50;
+        y = treeLine(150);
+    }
 }
