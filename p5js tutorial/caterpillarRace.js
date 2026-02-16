@@ -5,12 +5,12 @@ let finishLine = 450;
 // Caterpillar
 let circX = startLine;
 let circY = 250;
+let segments = 6;
+let spacing = 20;
+let segmentSize = 50;
 
 function setup(){
     createCanvas(500, 500);
-    let segments = 6;
-    let spacing = 20;
-    let segmentSize = 50;
 }
 
 function draw(){
@@ -25,13 +25,16 @@ function draw(){
     fill(0, 0, 0);
     rect(startLine, 0, 5, 500);
 
-    // Caterpillar
-    stroke(0);
-    fill(255, 0, 255);
-    circle(circX, circY, 50);
-
     // Caterpillar movement
-    circX += 20;
+    let x = circX;
+
+    for (let i = 0; i < segments; i++){
+        stroke(0);
+        fill(255, 0, 255);
+        circle(circX, circY, 50);
+    }
+
+    circX += spacing;
 
     // Srtop simulation when caterpillar reaches finish line
     if (circX > finishLine){
