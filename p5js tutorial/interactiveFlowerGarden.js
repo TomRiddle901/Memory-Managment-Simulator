@@ -12,4 +12,6 @@ function setup(){
 
 function draw(){
     background("lightblue");
+
+    text(flower.emoji, flower.x, flower.y); // Display flower object
 }
