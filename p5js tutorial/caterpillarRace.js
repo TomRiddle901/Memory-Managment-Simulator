@@ -9,6 +9,7 @@ let segments = 6;
 let spacing = 20;
 let segmentSize = 50;
 let eyeSize = 15;
+let numCaterpillar = 3;
 
 function setup(){
     createCanvas(500, 500);
@@ -29,9 +30,7 @@ function draw(){
     fill(0, 0, 0);
     rect(startLine, 0, 5, 500);
 
-    drawCaterpillar(circX, circY);
-    drawCaterpillar(circX, circY + 150);
-    drawCaterpillar(circX, circY - 150);
+    drawMultipleCaterpillars();
 
     // Srtop simulation when caterpillar reaches finish line
     if (circX > finishLine){
@@ -57,4 +56,10 @@ function drawCaterpillar(x, y){
     strokeWeight(3);
     circle(x, y - eyeSize, eyeSize);
     circle(x - eyeSize, y - eyeSize, eyeSize);
+}
+
+function drawMultipleCaterpillars(){
+    for (let i = 0; i < numCaterpillar; i++){
+        drawCaterpillar(circX, circY);
+    }
 }
