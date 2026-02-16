@@ -15,4 +15,18 @@ function draw(){
 
     textSize(100);
     text(flower.emoji, flower.x, flower.y); // Display flower object
+
+    let myFlower = createFlowers();
+}
+
+function createFlowers(){
+    let flower = {
+        x: random(20, 380),
+        y: random(20, 380),
+        size: random(20, 80),
+        lifespan: random(255, 300),
+        color: color(random(255), random(255), random(255))
+    };
+
+    return flower;
 }
