@@ -20,7 +20,7 @@ function setup(){
 
     // Position of last segment into the array
     for (let i = 0; i < numCaterpillar; i++){
-        posCaterpillarEnds[i].push(startLine);
+        posCaterpillarEnds.push(startLine);
     }
 }
 
