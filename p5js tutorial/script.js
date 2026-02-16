@@ -107,3 +107,9 @@ function bushes(){
         x += 100;
     }
 }
+
+function keyPressed(){
+    redVal = 0;
+    greenVal = 0;
+    sunHeight = 600;
+}
