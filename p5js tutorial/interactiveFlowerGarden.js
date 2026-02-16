@@ -17,6 +17,10 @@ function draw(){
     text(flower.emoji, flower.x, flower.y); // Display flower object
 
     let myFlower = createFlowers();
+
+    // Create an ellipse using myFlower properties
+    fill(myFlower.color);
+    ellipse(myFlower.x, myFlower.y, myFlower.size);
 }
 
 function createFlowers(){
