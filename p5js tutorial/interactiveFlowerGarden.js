@@ -8,6 +8,8 @@ function setup(){
     createCanvas(500, 500);
 
     console.log(flower);
+
+    frameRate(1);
 }
 
 function draw(){
