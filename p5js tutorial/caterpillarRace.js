@@ -32,9 +32,9 @@ function draw(){
         stroke(0);
         fill(255, 0, 255);
         circle(circX, circY, 50);
+        
+        circX += spacing;
     }
-
-    circX += spacing;
 
     // Srtop simulation when caterpillar reaches finish line
     if (circX > finishLine){
