@@ -31,11 +31,11 @@ function draw(){
     // Start and finish lines
     noStroke();
     fill(0, 255, 0);
-    rect(finishLine, 0, 20, 500);
+    rect(finishLine, 0, 20, 500); // Finish line
 
     noStroke();
     fill(0, 0, 0);
-    rect(startLine, 0, 5, 500);
+    rect(startLine, 0, 5, 500); // Start line
 
     if (isRacing){
         moveCaterpillars();
@@ -44,6 +44,8 @@ function draw(){
     }
 
     drawMultipleCaterpillars();
+    
+    checkWinner();
 }
 
 
