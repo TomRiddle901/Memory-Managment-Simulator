@@ -25,6 +25,7 @@ function draw(){
     rect(0, horizon, 1280, 720);
 
     mountains();
+    bushes();
     forest();
 
     // Reduce sun height by 2 until it reaches 130
@@ -87,5 +88,22 @@ function forest(){
         tree(x, y, 10);
         x += 50;
         y = treeLine(150);
+    }
+}
+
+function bush(x, y, size){
+    fill(0, 100, 0);
+    circle(x, y, size*2);
+    circle(x-size, y+size/2, size*2);
+    circle(x+size, y+size/2, size*2);
+}
+
+function bushes(){
+    let x = 100;
+    let y = 500;
+
+    for (let i = 0; i < 1000; i++){
+        bush(x, y, 20);
+        x += 100;
     }
 }
