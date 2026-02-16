@@ -8,6 +8,9 @@ let circY = 250;
 
 function setup(){
     createCanvas(500, 500);
+    let segments = 6;
+    let spacing = 20;
+    let segmentSize = 50;
 }
 
 function draw(){
