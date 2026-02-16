@@ -25,7 +25,7 @@ function draw(){
     rect(0, horizon, 1280, 720);
 
     mountains();
-    trees();
+    forest();
 
     // Reduce sun height by 2 until it reaches 130
     if (sunHeight > 130){
@@ -67,7 +67,7 @@ function mountains(){
     triangle(1600, 400, 1150, 60, 1270, 400);
 }
 
-function trees(){
+function forest(){
     fill(100, 50, 0);
     rect(100, 300, 20, 100);
     fill(0, 100, 0);
