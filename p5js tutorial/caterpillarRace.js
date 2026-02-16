@@ -95,3 +95,20 @@ function writeStart(){
     // Text
     text("Click to start!", width / 2, height / 2);
 }
+
+function checkWinner(){
+    for (let i = 0; i < posCaterpillarEnds.length; i++){
+        if (posCaterpillarEnds >= finishLine){
+            // Text decoration
+            textSize(24);
+            fill(0, 100, 0);
+            textAlign(CENTER);
+            noStroke();
+
+            // Text
+            text(`Caterpillar ${i + 1} wins!`, width / 2, height / 2);
+            
+            noLoop(); // Stop draw() loop
+        }
+    }
+}
