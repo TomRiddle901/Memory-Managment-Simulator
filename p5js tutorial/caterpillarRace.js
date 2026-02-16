@@ -11,6 +11,9 @@ let segmentSize = 50;
 
 function setup(){
     createCanvas(500, 500);
+
+    // FPS
+    frameRate(2);
 }
 
 function draw(){
@@ -31,10 +34,12 @@ function draw(){
     for (let i = 0; i < segments; i++){
         stroke(0);
         fill(255, 0, 255);
-        circle(circX, circY, 50);
+        circle(x, circY, segmentSize);
         
-        circX += spacing;
+        x += spacing;
     }
+
+    circX += spacing;
 
     // Srtop simulation when caterpillar reaches finish line
     if (circX > finishLine){
