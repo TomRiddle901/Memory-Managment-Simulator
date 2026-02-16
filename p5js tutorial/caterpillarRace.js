@@ -3,8 +3,8 @@ let startLine = 40;
 let finishLine = 450;
 
 // Caterpillar
-let circX = startLine;
-let circY = 250;
+// let circX = startLine;
+// let circY = 250;
 let segments = 6;
 let spacing = 20;
 let segmentSize = 50;
@@ -36,6 +36,7 @@ function draw(){
     fill(0, 0, 0);
     rect(startLine, 0, 5, 500);
 
+    moveCaterpillars();
     drawMultipleCaterpillars();
 
     // Srtop simulation when caterpillar reaches finish line
@@ -43,6 +44,7 @@ function draw(){
         noLoop();
     }
 }
+
 
 function drawCaterpillar(x, y){
     // Draw and move the caterpillar main body
@@ -53,8 +55,6 @@ function drawCaterpillar(x, y){
         
         x += spacing;
     }
-
-    circX += spacing;
 
     // Draw and move the caterpillar eyes
     fill(0);
@@ -68,6 +68,13 @@ function drawMultipleCaterpillars(){
     for (let i = 0; i < numCaterpillar; i++){
         let padding = height / numCaterpillar;
         let y = (i + 0.5) * padding;
-        drawCaterpillar(circX, y);
+        drawCaterpillar(posCaterpillarEnds[i], y);
+    }
+}
+
+function moveCaterpillars(){
+    for (let i = 0; i < numCaterpillar; i++){
+        let move = random(5, 30);
+        posCaterpillarEnds[i] += move;
     }
 }
