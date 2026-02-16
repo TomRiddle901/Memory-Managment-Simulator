@@ -5,7 +5,7 @@ let finishLine = 450;
 // Caterpillar
 // let circX = startLine;
 // let circY = 250;
-let segments = 6;
+//let segments = 6;
 let spacing = 20;
 let segmentSize = 50;
 let eyeSize = 15;
@@ -41,7 +41,7 @@ function draw(){
 }
 
 
-function drawCaterpillar(x, y){
+function drawCaterpillar(x, y, segments){
     // Draw and move the caterpillar main body
     for (let i = 0; i < segments; i++){
         stroke(0);
@@ -63,7 +63,8 @@ function drawMultipleCaterpillars(){
     for (let i = 0; i < numCaterpillar; i++){
         let padding = height / numCaterpillar;
         let y = (i + 0.5) * padding;
-        drawCaterpillar(posCaterpillarEnds[i], y);
+        let crawl = round(random(3, 6));
+        drawCaterpillar(posCaterpillarEnds[i], y, crawl);
     }
 }
 
