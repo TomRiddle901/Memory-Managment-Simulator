@@ -86,6 +86,12 @@ function mousePressed(){
 }
 
 function writeStart(){
-    text("Click to start!", width / 2, height / 2);
+    // Text decoration
+    textSize(24);
+    fill(255);
     textAlign(CENTER);
+    noStroke();
+
+    // Text
+    text("Click to start!", width / 2, height / 2);
 }
