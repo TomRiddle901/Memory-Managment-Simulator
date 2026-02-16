@@ -8,6 +8,7 @@ let circY = 250;
 let segments = 6;
 let spacing = 20;
 let segmentSize = 50;
+let eyeSize = 15;
 
 function setup(){
     createCanvas(500, 500);
@@ -28,9 +29,18 @@ function draw(){
     fill(0, 0, 0);
     rect(startLine, 0, 5, 500);
 
-    // Caterpillar movement
+    drawCaterpillar();
+
+    // Srtop simulation when caterpillar reaches finish line
+    if (circX > finishLine){
+        noLoop();
+    }
+}
+
+function drawCaterpillar(){
     let x = circX;
 
+    // Draw and move the caterpillar main body
     for (let i = 0; i < segments; i++){
         stroke(0);
         fill(255, 0, 255);
@@ -41,8 +51,10 @@ function draw(){
 
     circX += spacing;
 
-    // Srtop simulation when caterpillar reaches finish line
-    if (circX > finishLine){
-        noLoop();
-    }
+    // Draw and move the caterpillar eyes
+    fill(0);
+    stroke(255);
+    strokeWeight(3);
+    circle(x, circY - eyeSize, eyeSize);
+    circle(x - eyeSize, circY - eyeSize, eyeSize);
 }
