@@ -60,6 +60,8 @@ function drawCaterpillar(x, y){
 
 function drawMultipleCaterpillars(){
     for (let i = 0; i < numCaterpillar; i++){
-        drawCaterpillar(circX, circY);
+        let padding = height / numCaterpillar;
+        let y = (i + 0.5) * padding;
+        drawCaterpillar(circX, y);
     }
 }
