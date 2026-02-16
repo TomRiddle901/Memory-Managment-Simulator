@@ -24,7 +24,7 @@ function draw(){
     fill("green");
     rect(0, horizon, 1280, 720);
 
-    mountains();
+    multiMountains();
     bushes();
     forest();
 
@@ -51,21 +51,21 @@ function sun(){
     circle(640, sunHeight, 160);
 }
 
-function mountains(){
+function mountains(x, y, size){
     fill(200, 200, 200);
-    triangle(200, 400, 520, 253, 800, 400);
+    triangle(x, y, x+size, y-size, x+size*2, y);
     fill(150, 150, 150);
-    triangle(200, 400, 520, 253, 350, 400);
+    triangle(x+size, y, x+size*2, y-size, x+size*3, y);
+}
 
-    fill(200, 200, 200);
-    triangle(-40, 400, 150, 200, 400, 400);
-    fill(150, 150, 150);
-    triangle(-40, 400, 150, 200, 50, 400);
-
-    fill(200, 200, 200);
-    triangle(650, 400, 1150, 60, 1350, 400);
-    fill(150, 150, 150);
-    triangle(1600, 400, 1150, 60, 1270, 400);
+function multiMountains(){
+    let x = 0;
+    let y = horizon;
+    
+    for (let i = 0; i < 1000; i++){
+        mountains(x, y, 200);
+        x += 200;
+    }
 }
 
 function tree(x, y, size){
