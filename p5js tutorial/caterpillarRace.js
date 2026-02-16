@@ -11,6 +11,7 @@ let segmentSize = 50;
 let eyeSize = 15;
 let numCaterpillar = 3;
 let posCaterpillarEnds = [];
+let isRacing = false;
 
 function setup(){
     createCanvas(500, 500);
@@ -36,7 +37,10 @@ function draw(){
     fill(0, 0, 0);
     rect(startLine, 0, 5, 500);
 
-    moveCaterpillars();
+    if (isRacing){
+        moveCaterpillars();
+    }
+
     drawMultipleCaterpillars();
 }
 
@@ -73,4 +77,8 @@ function moveCaterpillars(){
         let move = random(5, 30);
         posCaterpillarEnds[i] += move;
     }
+}
+
+function mousePressed(){
+    isRacing = true;
 }
