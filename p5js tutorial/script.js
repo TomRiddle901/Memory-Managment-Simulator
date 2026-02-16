@@ -25,7 +25,7 @@ function draw(){
     rect(0, horizon, 1280, 720);
 
     mountains();
-    forest();
+    tree(150, 320, 20);
 
     // Reduce sun height by 2 until it reaches 130
     if (sunHeight > 130){
@@ -67,64 +67,9 @@ function mountains(){
     triangle(1600, 400, 1150, 60, 1270, 400);
 }
 
-function forest(){
+function tree(x, y, size){
     fill(100, 50, 0);
-    rect(100, 300, 20, 100);
+    rect(x-size, y, size*2, size*6);
     fill(0, 100, 0);
-    triangle(50, 300, 110, 200, 170, 300);
-
-    fill(100, 50, 0);
-    rect(200, 300, 20, 100);
-    fill(0, 100, 0);
-    circle(210, 250, 100);
-
-    fill(100, 50, 0);
-    rect(300, 300, 20, 100);
-    fill(0, 100, 0);
-    triangle(250, 300, 310, 200, 370, 300);
-
-    fill(100, 50, 0);
-    rect(450, 300, 20, 100);
-    fill(0, 100, 0);
-    circle(460, 250, 100);
-
-    fill(100, 50, 0);
-    rect(500, 300, 20, 100);
-    fill(0, 100, 0);
-    triangle(450, 300, 510, 200, 570, 300);
-
-    fill(100, 50, 0);
-    rect(620, 300, 20, 100);
-    fill(0, 100, 0);
-    circle(630, 250, 100);
-
-    fill(100, 50, 0);
-    rect(700, 300, 20, 100);
-    fill(0, 100, 0);
-    triangle(650, 300, 710, 200, 770, 300);
-
-    fill(100, 50, 0);
-    rect(790, 300, 20, 100);
-    fill(0, 100, 0);
-    circle(800, 250, 100);
-
-    fill(100, 50, 0);
-    rect(900, 300, 20, 100);
-    fill(0, 100, 0);
-    triangle(850, 300, 910, 200, 970, 300);
-
-    fill(100, 50, 0);
-    rect(980, 300, 20, 100);
-    fill(0, 100, 0);
-    circle(990, 250, 100);
-
-    fill(100, 50, 0);
-    rect(1100, 300, 20, 100);
-    fill(0, 100, 0);
-    triangle(1050, 300, 1110, 200, 1170, 300);
-
-    fill(100, 50, 0);
-    rect(1200, 300, 20, 100);
-    fill(0, 100, 0);
-    circle(1210, 250, 100);
+    triangle(x-size*3, y, x, y-size*8, x+size*3, y);
 }
