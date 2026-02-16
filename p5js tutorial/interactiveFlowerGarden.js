@@ -3,3 +3,5 @@ let flower = {
     y: 100,
     emoji: '🌸'
 };
+
+console.log(flower);
