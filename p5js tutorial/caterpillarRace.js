@@ -38,11 +38,6 @@ function draw(){
 
     moveCaterpillars();
     drawMultipleCaterpillars();
-
-    // Srtop simulation when caterpillar reaches finish line
-    if (circX > finishLine){
-        noLoop();
-    }
 }
 
 
