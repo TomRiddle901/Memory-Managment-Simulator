@@ -1,20 +1,17 @@
 // Sunrise
-let sunHeight;
+let sunHeight = 600;
 let horizon = 360;
+
+// Colors for sunrise
+let greenVal = 0;
+let redVal = 0;
 
 function setup(){
     createCanvas(1280,720);
 }
 
 function draw(){
-    sunHeight = mouseY;
-
-    // Change background color based on sun height
-    if (sunHeight < horizon){
-        background("lightblue");
-    }else{
-        background("darkblue");
-    }
+    background(greenVal, redVal, 0);
 
     // Sun
     fill(255, 135, 5, 60);
@@ -45,4 +42,15 @@ function draw(){
     triangle(650, 400, 1150, 60, 1350, 400);
     fill(150, 150, 150);
     triangle(1600, 400, 1150, 60, 1270, 400);
+
+    // Reduce sun height by 2 until it reaches 130
+    if (sunHeight > 130){
+        sunHeight -= 2;
+    }
+
+    // Increase color variable by 4 or 1 during sunrise
+    if (sunHeight < 480){
+        redVal += 4;
+        greenVal += 1;
+    }
 }
