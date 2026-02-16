@@ -98,7 +98,7 @@ function writeStart(){
 
 function checkWinner(){
     for (let i = 0; i < posCaterpillarEnds.length; i++){
-        if (posCaterpillarEnds >= finishLine){
+        if (posCaterpillarEnds[i] >= finishLine){
             // Text decoration
             textSize(24);
             fill(0, 100, 0);
