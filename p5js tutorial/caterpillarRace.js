@@ -10,12 +10,18 @@ let spacing = 20;
 let segmentSize = 50;
 let eyeSize = 15;
 let numCaterpillar = 3;
+let posCaterpillarEnds = [];
 
 function setup(){
     createCanvas(500, 500);
 
     // FPS
     frameRate(2);
+
+    // Position of last segment into the array
+    for (let i = 0; i < numCaterpillar; i++){
+        posCaterpillarEnds[i].push(startLine);
+    }
 }
 
 function draw(){
