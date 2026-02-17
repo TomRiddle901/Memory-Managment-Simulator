@@ -1,4 +1,4 @@
-let flowersArray = ["Rose", "Daisy", "Tulip"];
+let flowersArray = [];
 
 function setup(){
     createCanvas(500, 500);
@@ -8,15 +8,12 @@ function setup(){
 function draw(){
     background("lightblue");
 
-    flowersArray.push("Sunflower");
-    fill(1, 1, 1);
-    for (let i = 0; i < flowersArray.length; i++){
-        text(flowersArray[i], 10, 50 + (50*i));
-    }
-    flowersArray.slice(4, 4);
-
     let flower1 = createFlowers();
     drawFlower(flower1);
+
+    for (let flower of flowersArray){
+        drawFlower(flower);
+    }
 }
 
 function createFlowers(){
@@ -42,4 +39,11 @@ function drawFlower(flower){
     //Draw the circle
     fill(255, 204, 0);
     ellipse(flower.x, flower.y, flower.size / 2);
+}
+
+function flowerPower(){
+    for (let i = 0; i < 20; i++){
+        let multiFlowers = createFlowers();
+        drawFlower(multiFlowers);
+    }
 }
