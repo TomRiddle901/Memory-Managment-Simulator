@@ -1,3 +1,5 @@
+let flowersArray = ["Rose", "Daisy", "Tulip"];
+
 function setup(){
     createCanvas(500, 500);
     frameRate(1);
@@ -5,6 +7,10 @@ function setup(){
 
 function draw(){
     background("lightblue");
+
+    for (int i = 0; i < flowersArray.length; i++){
+        text(flowersArray[i], 10, 50);
+    }
 
     let flower1 = createFlowers();
     drawFlower(flower1);
