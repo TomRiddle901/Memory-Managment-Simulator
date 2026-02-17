@@ -6,15 +6,6 @@ function setup(){
 function draw(){
     background("lightblue");
 
-    textSize(100);
-    text(flower.emoji, flower.x, flower.y); // Display flower object
-
-    let myFlower = createFlowers();
-
-    // Create an ellipse using myFlower properties
-    fill(myFlower.color);
-    ellipse(myFlower.x, myFlower.y, myFlower.size);
-
     let flower1 = createFlowers();
     drawFlower(flower1);
 }
