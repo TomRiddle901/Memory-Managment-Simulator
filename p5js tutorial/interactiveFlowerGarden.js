@@ -8,6 +8,7 @@ function setup(){
 function draw(){
     background("lightblue");
 
+    fill(1, 1, 1);
     for (let i = 0; i < flowersArray.length; i++){
         text(flowersArray[i], 10, 50 + (50*i));
     }
