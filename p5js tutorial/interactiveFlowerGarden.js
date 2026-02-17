@@ -23,7 +23,7 @@ function createFlowers(){
 }
 
 function drawFlower(flower){
-    noSroke();
+    noStroke();
     fill(flower.color);
 
     // Draw pedals
