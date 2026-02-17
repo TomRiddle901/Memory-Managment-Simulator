@@ -23,6 +23,9 @@ function draw(){
     // Create an ellipse using myFlower properties
     fill(myFlower.color);
     ellipse(myFlower.x, myFlower.y, myFlower.size);
+
+    let flower1 = createFlowers();
+    drawFlower(flower1);
 }
 
 function createFlowers(){
