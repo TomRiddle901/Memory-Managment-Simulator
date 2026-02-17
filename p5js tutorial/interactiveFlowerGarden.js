@@ -36,3 +36,16 @@ function createFlowers(){
 
     return flower;
 }
+
+function drawFlower(flower){
+    noSroke();
+    fill(flower.color);
+
+    // Draw pedals
+    ellipse(flower.x, flower.y, flower.size / 2, flower.size);
+    ellipse(flower.x, flower.y, flower.size, flower.size / 2);
+
+    //Draw the circle
+    fill(255, 204, 0);
+    ellipse(flower.x, flower.y, flower.size / 2);
+}
