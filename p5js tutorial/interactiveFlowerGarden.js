@@ -51,3 +51,18 @@ function flowerPower(){
         flowersArray.push(flower);
     }
 }
+
+function updateAndDrawFlowers(){
+    for (let flower  of flowersArray){
+        drawFlower(flower);
+
+        flower.size *= 0.99;
+        flower.lifespan -= 1;
+
+        if (flower.lifespan <= 0){
+            let i = flower.indexOf(flower);
+
+            flower.splice(i, 1);
+        }
+    }
+}
