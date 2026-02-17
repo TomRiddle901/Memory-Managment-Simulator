@@ -3,16 +3,20 @@ let flowersArray = [];
 function setup(){
     createCanvas(500, 500);
     frameRate(1);
+
+    flowerPower();
 }
 
 function draw(){
     background("lightblue");
 
+    /*
     let flower1 = createFlowers();
     drawFlower(flower1);
+    */
 
-    for (let flower of flowersArray){
-        drawFlower(flower);
+    for (let flowers of flowersArray){
+        drawFlower(flowers);
     }
 }
 
@@ -44,7 +48,6 @@ function drawFlower(flower){
 function flowerPower(){
     for (let i = 0; i < 20; i++){
         let flower = createFlowers();
-
         flowersArray.push(flower);
     }
 }
