@@ -38,12 +38,13 @@ function drawFlower(flower){
 
     //Draw the circle
     fill(255, 204, 0);
-    ellipse(flower.x, flower.y, flower.size / 2);
+    circle(flower.x, flower.y, flower.size / 2);
 }
 
 function flowerPower(){
     for (let i = 0; i < 20; i++){
-        let multiFlowers = createFlowers();
-        drawFlower(multiFlowers);
+        let flower = createFlowers();
+
+        flowersArray.push(flower);
     }
 }
