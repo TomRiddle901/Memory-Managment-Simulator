@@ -13,6 +13,7 @@ function draw(){
     for (let i = 0; i < flowersArray.length; i++){
         text(flowersArray[i], 10, 50 + (50*i));
     }
+    flowersArray.slice(4, 4);
 
     let flower1 = createFlowers();
     drawFlower(flower1);
