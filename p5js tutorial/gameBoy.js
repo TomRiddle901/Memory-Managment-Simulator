@@ -62,6 +62,20 @@ function setup(){
     // Style for the arrow button container
     arrowButtons.style("display", "flex");
     arrowButtons.style("align-items", "center");
+
+    // Style for Game Boy score container
+    scoreContainer.style("position", "absolute");
+    scoreContainer.style("margin-left", "340px");
+    scoreContainer.style("color", "#fff");
+    scoreContainer.style("margin-top", "5px");
+
+    // Style for Game Boy text
+    gameBoyText.style("margin", "10px 145px");
+    gameBoyText.style("font-size", "25px");
+    gameBoyText.style("color", "#fff");
+    gameBoyText.style("background-color", "#0077b6");
+    gameBoyText.style("padding", "5px");
+    gameBoyText.style("border-radius", "5px");
 }
 
 function draw(){
