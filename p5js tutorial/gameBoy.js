@@ -10,7 +10,7 @@ function setup(){
     let gameContainer = createDiv();
     gameContainer.id("game-container"); // Game boy emulator container
 
-    let scoreContainer = createDiv("Score: ");
+    let scoreContainer = createDiv("Punteggio: ");
     scoreContainer.id("score-container"); // Game boy emulator score container
 
     let scoreSpan = createP("0");
@@ -169,4 +169,34 @@ function setup(){
 
 function draw(){
     background(51);
+
+    // If the game is not started
+    if (gameStarted === false){
+        displayStartMessage();
+        return;
+    }
+
+    // Update the snake state
+    if (gamePaused === false){
+        moveSnake();
+        checkEdges();
+        checkFood();
+        checkSelf();
+        updateBody();
+    }
+
+    // Draw the snake and the food
+    drawFood();
+    drawSnake();
+
+    // If game has ended
+    if (gameOver === true){
+        displayEndMessage();
+        noLoop();
+    }
+
+    // Update the score
+    textAlign(RIGHT);
+    fill(255);
+    text(`Punteggio: ${score}`, width - 10, 20);
 }

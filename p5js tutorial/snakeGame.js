@@ -158,7 +158,7 @@ function goRight(){
     snake.ySpeed = 0;
 }
 
-function keyPressed(){ // Built-in p5js function for keyboard buttons pressing
+function keyPressed(){ // Built-in p5.js function for keyboard buttons pressing
     // ARROW control
     if (keyCode === UP_ARROW){
         goUp();
