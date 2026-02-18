@@ -138,7 +138,7 @@ function setup(){
     downButton.style('border-radius', '5px');
 
     let playButton = createButton('▶');
-    // Connection to the buttons container
+    // Connection to the action buttons container
     actionButtons.child(playButton);
     playButton.id('play');
     // Play button style
@@ -149,7 +149,17 @@ function setup(){
     playButton.style('border-radius','50%');
     playButton.style('margin-right', '10px');
 
-
+    let pauseButton = createButton('❚❚');
+    pauseButton.id('pause');
+    // Pause button style
+    pauseButton.style('background-color', '#0000ff');
+    pauseButton.style('color', 'white');
+    pauseButton.style('width', '60px');
+    pauseButton.style('height', '60px');
+    pauseButton.style('font-size', '24px');
+    pauseButton.style('border-radius', '50%');
+    // connection to the action buttons container
+    actionButtons.child(pauseButton);
 }
 
 function draw(){
