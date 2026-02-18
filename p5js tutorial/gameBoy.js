@@ -8,7 +8,10 @@ function setup(){
     gameBoyEmulator.id("game-boy-emulator"); // Game boy emulator container
 
     let gameContainer = createDiv();
-    gameContainer.id("game-container")
+    gameContainer.id("game-container"); // Game boy emulator container
+
+    let scoreContainer = createDiv();
+    scoreContainer.id("score-container"); // Game boy emulator score container
 }
 
 function draw(){
