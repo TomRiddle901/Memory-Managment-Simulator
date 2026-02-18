@@ -95,8 +95,11 @@ function setup(){
     upButton.style('height', '40px');
     upButton.style('margin-bottom', '10px');
     upButton.style('border-radius', '5px');
-    // Connection to the container
+    // Connection to the buttons container
     arrowButtons.child(upButton);
+
+    // Connect arrow buttons to the buttons container
+    arrowButtons.child(leftRightContainer);
 
     let leftButton = createButton('◀');
     leftButton.id('left');
@@ -107,7 +110,7 @@ function setup(){
     leftButton.style('height', '40px');
     leftButton.style('margin-right', '30px');
     leftButton.style('border-radius', '5px');
-    // Connection to the container
+    // Connection to the buttons container
     leftRightContainer.child(leftButton);
 
     let rightButton = createButton('▶');
@@ -119,10 +122,11 @@ function setup(){
     rightButton.style('height', '40px');
     rightButton.style('margin-left', '5px');
     rightButton.style('border-radius', '5px');
-    // Connection to the container
+    // Connection to the buttons container
     leftRightContainer.child(rightButton);
 
     let downButton = createButton('▼');
+    // Connection to the buttons container
     arrowButtons.child(downButton);
     downButton.id('down');
     // Down button style
