@@ -172,3 +172,14 @@ function keyPressed(){ // Built-in p5js function for keyboard buttons pressing
         goRight();
     }
 }
+
+function startGame(){
+    score = 0;
+    gameStarted = true;
+    gamePaused = false;
+    if (gameOver === true){
+        resetSnake();
+        gameOver = false;
+    }
+    loop();
+}
