@@ -183,3 +183,7 @@ function startGame(){
     }
     loop();
 }
+
+function pasueGame(){
+    gamePaused = true;
+}
