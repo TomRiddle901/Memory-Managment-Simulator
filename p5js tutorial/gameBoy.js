@@ -3,6 +3,11 @@ let winHeight = 300;
 
 function setup(){
     let canvas = createCanvas(winWidth, winHeight);
+
+    let gameBoyEmulator = createDiv();
+    gameBoyEmulator.id("game-boy-emulator"); // Game boy emulator container
+
+    let
 }
 
 function draw(){
