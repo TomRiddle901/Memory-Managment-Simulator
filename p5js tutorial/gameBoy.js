@@ -30,6 +30,14 @@ function setup(){
 
     let actionbuttons = createDiv();
     actionbuttons.id("action-buttons"); // Game boy action buttons
+
+    let body = select('body');
+
+    // Connecting containers to the body
+    body.child(gameBoyEmulator);
+    body.child(gameContainer);
+    body.child(buttonContainer);
+
 }
 
 function draw(){
