@@ -160,6 +160,11 @@ function setup(){
     pauseButton.style('border-radius', '50%');
     // connection to the action buttons container
     actionButtons.child(pauseButton);
+
+    // snakeGame.js
+    frameRate(fps); // set the framerate of the screen
+    moveFood(); // move the food to a random location
+    resetSnake(); // reset the snake
 }
 
 function draw(){
