@@ -31,6 +31,9 @@ function setup(){
     let actionButtons = createDiv();
     actionButtons.id("action-buttons"); // Game boy action buttons
 
+    let leftRightContainer = createDiv();
+    leftRightContainer.id("leftRightContainer"); // Game Boy left right buttons container
+
     let body = select('body');
 
     // Connecting containers to the body
@@ -44,6 +47,7 @@ function setup(){
     gameContainer.child(scoreContainer);
     gameContainer.child(canvas);
     buttonContainer.child(arrowButtons);
+    buttonContainer.child(actionButtons);
 
     // Style for the Game Boy emulator container
     gameBoyEmulator.style("background-color", "#8b8b8b");
@@ -60,7 +64,12 @@ function setup(){
 
     // Style for the arrow button container
     arrowButtons.style("display", "flex");
+    arrowButtons.style("flex-direction", "column");
     arrowButtons.style("align-items", "center");
+
+    // Style for the action buttons container
+    actionButtons.style("display", "flex");
+    actionButtons.style("align-items", "center");
 
     // Style for Game Boy score container
     scoreContainer.style("position", "absolute");
@@ -79,41 +88,50 @@ function setup(){
     // Buttons
     let upButton = createButton('▲');
     upButton.id('up');
-    let downButton = createButton('▼');
-    downButton.id('down');
-    let leftButton = createButton('◀');
-    leftButton.id('left');
-    let rightButton = createButton('▶');
-    rightButton.id('right');
-
-    // Buttons style
-    upButton.style('color', '#ffffff');
-    upButton.style('background-color', '#ff0000');
+    // Up button style
+    upButton.style('color', 'white');
+    upButton.style('background-color', 'red');
     upButton.style('width', '40px');
     upButton.style('height', '40px');
     upButton.style('margin-bottom', '10px');
     upButton.style('border-radius', '5px');
+    // Connection to the container
+    arrowButtons.child(upButton);
 
-    downButton.style('color', '#ffffff');
-    downButton.style('background-color', '#ff0000');
-    downButton.style('width', '40px');
-    downButton.style('height', '40px');
-    downButton.style('margin-bottom', '10px');
-    downButton.style('border-radius', '5px');
-
-    leftButton.style('color', '#ffffff');
-    leftButton.style('background-color', '#ff0000');
+    let leftButton = createButton('◀');
+    leftButton.id('left');
+    // Left button style
+    leftButton.style('color', 'white');
+    leftButton.style('background-color', 'red');
     leftButton.style('width', '40px');
     leftButton.style('height', '40px');
-    leftButton.style('margin-bottom', '10px');
+    leftButton.style('margin-right', '30px');
     leftButton.style('border-radius', '5px');
+    // Connection to the container
+    leftRightContainer.child(leftButton);
 
-    rightButton.style('color', '#ffffff');
-    rightButton.style('background-color', '#ff0000');
+    let rightButton = createButton('▶');
+    rightButton.id('right');
+    // Right button style
+    rightButton.style('color', 'white');
+    rightButton.style('background-color', 'red');
     rightButton.style('width', '40px');
     rightButton.style('height', '40px');
-    rightButton.style('margin-bottom', '10px');
+    rightButton.style('margin-left', '5px');
     rightButton.style('border-radius', '5px');
+    // Connection to the container
+    leftRightContainer.child(rightButton);
+
+    let downButton = createButton('▼');
+    arrowButtons.child(downButton);
+    downButton.id('down');
+    // Down button style
+    downButton.style('color', 'white');
+    downButton.style('background-color', 'red');
+    downButton.style('width', '40px');
+    downButton.style('height', '40px');
+    downButton.style('margin-top', '10px');
+    downButton.style('border-radius', '5px');
 }
 
 function draw(){
