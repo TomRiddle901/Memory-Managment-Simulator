@@ -165,6 +165,7 @@ function setup(){
     frameRate(fps); // set the framerate of the screen
     moveFood(); // move the food to a random location
     resetSnake(); // reset the snake
+    playButton.mousePressed(startGame());
 }
 
 function draw(){
