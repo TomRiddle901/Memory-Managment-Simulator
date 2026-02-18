@@ -136,6 +136,20 @@ function setup(){
     downButton.style('height', '40px');
     downButton.style('margin-top', '10px');
     downButton.style('border-radius', '5px');
+
+    let playButton = createButton('▶');
+    // Connection to the buttons container
+    actionButtons.child(playButton);
+    playButton.id('play');
+    // Play button style
+    playButton.style('background-color', '#0000ff');
+    playButton.style('color', 'white');
+    playButton.style('width', '60px');
+    playButton.style('height', '60px');
+    playButton.style('border-radius','50%');
+    playButton.style('margin-right', '10px');
+
+
 }
 
 function draw(){
