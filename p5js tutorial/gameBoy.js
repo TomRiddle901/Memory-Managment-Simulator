@@ -75,6 +75,16 @@ function setup(){
     gameBoyText.style("background-color", "#0077b6");
     gameBoyText.style("padding", "5px");
     gameBoyText.style("border-radius", "5px");
+
+    // Buttons
+    let upButton = createButton('▲');
+    upButton.id('up');
+    let downButton = createButton('▼');
+    downButton.id('down');
+    let leftButton = createButton('◀');
+    leftButton.id('left');
+    let rightButton = createButton('▶');
+    rightButton.id('right');
 }
 
 function draw(){
