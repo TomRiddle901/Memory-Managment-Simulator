@@ -18,6 +18,18 @@ function setup(){
 
     let gameBoyText = createDiv("GameBoy");
     gameBoyText.id("game-boy-text"); // Game boy text
+
+    let buttonContainer = createDiv();
+    buttonContainer.id("button-container"); // Game boy buttons container
+
+    let arrowButtons = createDiv();
+    arrowButtons.id("arrow-buttons"); // Game boy arrow buttons container
+
+    let leftRightButtons = createDiv();
+    leftRightButtons.id("left-right-buttons"); // Game boy left/right buttons
+
+    let actionbuttons = createDiv();
+    actionbuttons.id("action-buttons"); // Game boy action buttons
 }
 
 function draw(){
