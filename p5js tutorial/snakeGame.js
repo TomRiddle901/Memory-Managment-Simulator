@@ -174,16 +174,16 @@ function keyPressed(){ // Built-in p5.js function for keyboard buttons pressing
     }
 
     // WASD control
-    if (keyCode === W){
+    if (key === 'w' || key === 'W'){
         goUp();
     }
-    if (keyCode === S){
+    if (key === 's' || key === 'S'){
         goDown();
     }
-    if (keyCode === A){
+    if (key === 'a' || key === 'A'){
         goLeft();
     }
-    if (keyCode === D){
+    if (key === 'd' || key === 'D'){
         goRight();
     }
 }
