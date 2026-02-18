@@ -44,6 +44,12 @@ function setup(){
     gameContainer.child(canvas);
     buttonContainer.child(arrowButtons);
     buttonContainer.child(actionbuttons);
+
+    // Style for the Game Boy emulator container
+    gameBoyEmulator.style("background-color", "#8b8b8b");
+    gameBoyEmulator.style("border", "10px solid #000000");
+    gameBoyEmulator.style("border-radius", "10px");
+    gameBoyEmulator.style("box-shadow", "0 0 20px rgba(0, 0, 0, 0.8)");
 }
 
 function draw(){
