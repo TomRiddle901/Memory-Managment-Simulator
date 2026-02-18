@@ -38,6 +38,12 @@ function setup(){
     body.child(gameContainer);
     body.child(buttonContainer);
 
+    // Connecting elements to the respective containers
+    scoreContainer.child(scoreSpan);
+    gameContainer.child(scoreContainer);
+    gameContainer.child(canvas);
+    buttonContainer.child(arrowButtons);
+    buttonContainer.child(actionbuttons);
 }
 
 function draw(){
