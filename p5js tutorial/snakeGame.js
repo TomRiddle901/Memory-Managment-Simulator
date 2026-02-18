@@ -109,3 +109,9 @@ function drawSnake(){
         square(x, y, gridSize);
     }
 }
+
+function changeDirection(xSpeed, ySpeed){
+    // Update the snake direction
+    snake.xSpeed = xSpeed;
+    snake.ySpeed = ySpeed;
+}
