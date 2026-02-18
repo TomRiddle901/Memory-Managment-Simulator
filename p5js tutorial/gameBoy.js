@@ -56,6 +56,10 @@ function setup(){
     buttonContainer.style("align-items", "center");
     buttonContainer.style("justify-content", "space-between");
     buttonContainer.style("margin-top", "20px");
+
+    // Style for the arrow button container
+    arrowButtons.style("display", "flex");
+    arrowButtons.style("align-items", "center");
 }
 
 function draw(){
