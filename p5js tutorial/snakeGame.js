@@ -99,3 +99,13 @@ function updateBody(){ // Update position of the snake body segments
     snake.body[0].x = snake.x;
     snake.body[0].y = snake.y;
 }
+
+function drawSnake(){
+    fill(0, 255, 0); // snake color
+
+    for (let segment of snake.body){
+        let x = segment.x * gridSize;
+        let y = segment.y * gridSize;
+        square(x, y, gridSize);
+    }
+}
