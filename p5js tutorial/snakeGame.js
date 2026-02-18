@@ -202,3 +202,11 @@ function startGame(){
 function pasueGame(){
     gamePaused = true;
 }
+
+function displayStartMessage(){
+    // Display start message
+    textSize(16);
+    textAlign(CENTER);
+    fill(255, 0, 0);
+    text('Premi ▶ per giocare', width / 2, height / 2);
+}
