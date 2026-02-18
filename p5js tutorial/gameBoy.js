@@ -14,7 +14,10 @@ function setup(){
     scoreContainer.id("score-container"); // Game boy emulator score container
 
     let scoreSpan = createP("0");
-    scoreSpan.id("score");
+    scoreSpan.id("score"); // Score element
+
+    let gameBoyText = createDiv("GameBoy");
+    gameBoyText.id("game-boy-text"); // Game boy text
 }
 
 function draw(){
