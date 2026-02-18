@@ -87,3 +87,15 @@ function moveSnake(){ // Moves snake foward
     snake.x += snake.xSpeed;
     snake.y += snake.ySpeed;
 }
+
+function updateBody(){ // Update position of the snake body segments
+    // Update the end of the tail
+    for (let i = snake.body.length; i > 0; i--){
+        snake.body[i].x = snake.body[i - 1].x;
+        snake.body[i].y = snake.body[i - 1].y;
+    }
+
+    // Update the head
+    snake.body[0].x = snake.x;
+    snake.body[0].y = snake.y;
+}
