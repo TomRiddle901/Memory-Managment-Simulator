@@ -90,7 +90,7 @@ function moveSnake(){ // Moves snake foward
 
 function updateBody(){ // Update position of the snake body segments
     // Update the end of the tail
-    for (let i = snake.body.length; i > 0; i--){
+    for (let i = snake.body.length - 1; i > 0; i--){
         snake.body[i].x = snake.body[i - 1].x;
         snake.body[i].y = snake.body[i - 1].y;
     }
