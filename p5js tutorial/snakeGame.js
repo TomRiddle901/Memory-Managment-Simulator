@@ -3,8 +3,8 @@ let rows = 15; // Game rows
 let gridSize = 20; // Dimension of grid
 
 // Window dimension
-let winWidth = cols * gridSize;
-let winHeight = rows * gridSize;
+let winWidthSnake = cols * gridSize;
+let winHeightSnake = rows * gridSize;
 
 // Snake options and settings
 let food = {x: 0, y: 0};
@@ -217,7 +217,7 @@ function displayEndMessage(){
     textSize(50);
     textAlign(CENTER);
     fill(255, 0, 0);
-    text('Game Over', winWidth / 2, height / 2);
+    text('Game Over', winWidthSnake / 2, height / 2);
     textSize(14);
     text('Premi ▶ per giocare', width / 2, height / 2 + 50);
 }
