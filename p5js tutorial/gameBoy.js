@@ -36,6 +36,7 @@ function setup(){
     // Connecting containers to the body
     body.child(gameBoyEmulator);
     body.child(gameContainer);
+    body.child(gameBoyText);
     body.child(buttonContainer);
 
     // Connecting elements to the respective containers
@@ -47,8 +48,9 @@ function setup(){
 
     // Style for the Game Boy emulator container
     gameBoyEmulator.style("background-color", "#8b8b8b");
-    gameBoyEmulator.style("border", "10px solid #000000");
+    gameBoyEmulator.style("border", "10px solid #000");
     gameBoyEmulator.style("border-radius", "10px");
+    gameBoyEmulator.style("padding", "20px");
     gameBoyEmulator.style("box-shadow", "0 0 20px rgba(0, 0, 0, 0.8)");
 
     // Style for the button container

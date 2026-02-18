@@ -8,9 +8,3 @@ canvas{
     display: block;
     border-radius: 10px;
 }
-
-#score-container, #score, #game-boy-text{
-    padding: 20px;
-    color: #000000;
-    font-family: "Adwaita Mono";
-}
