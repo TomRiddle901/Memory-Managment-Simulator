@@ -32,3 +32,8 @@ function drawFood(){
     fill(255, 255, 0);
     square(x, y, gridSize);
 }
+
+function moveFood(){ // Move randomly the food
+    food.x = random(random(cols));
+    food.y = random(random(rows));
+}
