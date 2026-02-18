@@ -115,3 +115,14 @@ function changeDirection(xSpeed, ySpeed){
     snake.xSpeed = xSpeed;
     snake.ySpeed = ySpeed;
 }
+
+function checkFood(){ // function for manage the snake diet
+    if (snake.x === food.x && snake.y === food.y){
+        let segment = {x: -1, y: -1};
+        snake.body.push(segment); // add a new segment of the body
+
+        score += 10; // update the score
+
+        moveFood(); // regenerate new food on a random location
+    }
+}
