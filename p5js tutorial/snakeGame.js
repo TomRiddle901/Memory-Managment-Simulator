@@ -157,3 +157,18 @@ function goRight(){
     snake.xSpeed = 1;
     snake.ySpeed = 0;
 }
+
+function keyPressed(){ // Built-in p5js function for keyboard buttons pressing
+    if (keyCode === UP_ARROW){
+        goUp();
+    }
+    if (keyCode === DOWN_ARROW){
+        goDown();
+    }
+    if (keyCode === LEFT_ARROW){
+        goLeft();
+    }
+    if (keyCode === RIGHT_ARROW){
+        goRight();
+    }
+}
