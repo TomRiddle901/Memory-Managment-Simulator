@@ -126,3 +126,13 @@ function checkFood(){ // function for manage the snake diet
         moveFood(); // regenerate new food on a random location
     }
 }
+
+function checkSelf(){ // function for check self collision
+    for (let i = 1; i < snake.body.length; i += 1){
+        let segment = snake.body[i];
+        if (snake.x === segment.x && snake.y === segment.y){
+            gameOver = true;
+            return;
+        }
+    }
+}
