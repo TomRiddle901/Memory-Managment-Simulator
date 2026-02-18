@@ -159,6 +159,7 @@ function goRight(){
 }
 
 function keyPressed(){ // Built-in p5js function for keyboard buttons pressing
+    // ARROW control
     if (keyCode === UP_ARROW){
         goUp();
     }
@@ -169,6 +170,20 @@ function keyPressed(){ // Built-in p5js function for keyboard buttons pressing
         goLeft();
     }
     if (keyCode === RIGHT_ARROW){
+        goRight();
+    }
+
+    // WASD control
+    if (keyCode === W){
+        goUp();
+    }
+    if (keyCode === S){
+        goDown();
+    }
+    if (keyCode === A{
+        goLeft();
+    }
+    if (keyCode === D){
         goRight();
     }
 }
