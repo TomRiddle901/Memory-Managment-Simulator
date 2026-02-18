@@ -56,3 +56,29 @@ function resetSnake(){
 
     snake.body.push(head); // add the head to the body
 }
+
+function checkEdges(){ // function for end the game when snake collides with an edge
+    // Right edge
+    if (snake.x === cols){
+        gameOver = true;
+        return;
+    }
+
+    // Left edge
+    if (snake.x === -1){
+        gameOver = true;
+        return;
+    }
+
+    // Top edge
+    if (snake.y === -1){
+        gameOver = true;
+        return;
+    }
+
+    // Bottom edge
+    if (snake.y === rows){
+        gameOver = true;
+        return;
+    }
+}
