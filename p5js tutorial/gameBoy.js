@@ -50,6 +50,12 @@ function setup(){
     gameBoyEmulator.style("border", "10px solid #000000");
     gameBoyEmulator.style("border-radius", "10px");
     gameBoyEmulator.style("box-shadow", "0 0 20px rgba(0, 0, 0, 0.8)");
+
+    // Style for the button container
+    buttonContainer.style("display", "flex");
+    buttonContainer.style("align-items", "center");
+    buttonContainer.style("justify-content", "space-between");
+    buttonContainer.style("margin-top", "20px");
 }
 
 function draw(){
