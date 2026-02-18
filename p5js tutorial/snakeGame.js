@@ -180,7 +180,7 @@ function keyPressed(){ // Built-in p5js function for keyboard buttons pressing
     if (keyCode === S){
         goDown();
     }
-    if (keyCode === A{
+    if (keyCode === A){
         goLeft();
     }
     if (keyCode === D){
