@@ -37,3 +37,22 @@ function moveFood(){ // Move randomly the food
     food.x = random(random(cols));
     food.y = random(random(rows));
 }
+
+function resetSnake(){
+    // Start at the center
+    snake.x = floor(cols / 2);
+    snake.y = floor(rows / 2);
+
+    // Move the snake to the right
+    snake.xSpeed = 1;
+    snake.ySpeed = 0;
+
+    snake.body = []; // array to manage the body
+
+    let head = { // head segment
+        x: snake.x,
+        y: snake.y
+    }
+
+    snake.body.push(head); // add the head to the body
+}
