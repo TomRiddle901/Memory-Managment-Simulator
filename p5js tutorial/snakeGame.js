@@ -82,3 +82,8 @@ function checkEdges(){ // function for end the game when snake collides with an 
         return;
     }
 }
+
+function moveSnake(){ // Moves snake foward
+    snake.x += snake.xSpeed;
+    snake.y += snake.ySpeed;
+}
