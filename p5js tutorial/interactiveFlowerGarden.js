@@ -53,16 +53,25 @@ function flowerPower(){
 }
 
 function updateAndDrawFlowers(){
-    for (let flower  of flowersArray){
+    for (let flower  of flowersArray) {
         drawFlower(flower);
 
         flower.size *= 0.99;
         flower.lifespan -= 1;
 
-        if (flower.lifespan <= 0){
+        if (flower.lifespan <= 0) {
             let i = flower.indexOf(flower);
 
             flower.splice(i, 1);
         }
     }
+}
+
+function mousePressed(){
+    let flower = createFlowers();
+
+    flower.x = mouseX;
+    flower.y = mouseY;
+
+    flowersArray.push(flower);
 }
