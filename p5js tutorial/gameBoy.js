@@ -85,6 +85,35 @@ function setup(){
     leftButton.id('left');
     let rightButton = createButton('▶');
     rightButton.id('right');
+
+    // Buttons style
+    upButton.style('color', '#ffffff');
+    upButton.style('background-color', '#ff0000');
+    upButton.style('width', '40px');
+    upButton.style('height', '40px');
+    upButton.style('margin-bottom', '10px');
+    upButton.style('border-radius', '5px');
+
+    downButton.style('color', '#ffffff');
+    downButton.style('background-color', '#ff0000');
+    downButton.style('width', '40px');
+    downButton.style('height', '40px');
+    downButton.style('margin-bottom', '10px');
+    downButton.style('border-radius', '5px');
+
+    leftButton.style('color', '#ffffff');
+    leftButton.style('background-color', '#ff0000');
+    leftButton.style('width', '40px');
+    leftButton.style('height', '40px');
+    leftButton.style('margin-bottom', '10px');
+    leftButton.style('border-radius', '5px');
+
+    rightButton.style('color', '#ffffff');
+    rightButton.style('background-color', '#ff0000');
+    rightButton.style('width', '40px');
+    rightButton.style('height', '40px');
+    rightButton.style('margin-bottom', '10px');
+    rightButton.style('border-radius', '5px');
 }
 
 function draw(){
