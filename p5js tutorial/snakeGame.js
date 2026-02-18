@@ -22,3 +22,13 @@ let gamePaused = false;
 let gameOver = false;
 let gameStarted = false;
 let fps = 5;
+
+function drawFood(){
+    // Food cordinates
+    let x = food.x * gridSize;
+    let y = food.y * gridSize;
+
+    // Food style
+    fill(255, 255, 0);
+    square(x, y, gridSize);
+}
