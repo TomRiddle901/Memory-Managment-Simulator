@@ -1,6 +1,7 @@
 html, body{
     display: flex;
     justify-content: center;
+    color: #FF00BCFF;
 }
 
 #text{
