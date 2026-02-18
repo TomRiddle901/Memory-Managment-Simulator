@@ -210,3 +210,14 @@ function displayStartMessage(){
     fill(255, 0, 0);
     text('Premi ▶ per giocare', width / 2, height / 2);
 }
+
+function displayEndMessage(){
+    // Display end message
+    background(0);
+    textSize(50);
+    textAlign(CENTER);
+    fill(255, 0, 0);
+    text('Game Over', winWidth / 2, height / 2);
+    textSize(14);
+    text('Premi ▶ per giocare', width / 2, height / 2 + 50);
+}
