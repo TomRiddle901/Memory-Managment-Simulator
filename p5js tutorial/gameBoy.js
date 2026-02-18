@@ -10,7 +10,7 @@ function setup(){
     let gameContainer = createDiv();
     gameContainer.id("game-container"); // Game boy emulator container
 
-    let scoreContainer = createDiv();
+    let scoreContainer = createDiv("Score: ");
     scoreContainer.id("score-container"); // Game boy emulator score container
 
     let scoreSpan = createP("0");
