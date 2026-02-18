@@ -28,8 +28,8 @@ function setup(){
     let leftRightButtons = createDiv();
     leftRightButtons.id("left-right-buttons"); // Game boy left/right buttons
 
-    let actionbuttons = createDiv();
-    actionbuttons.id("action-buttons"); // Game boy action buttons
+    let actionButtons = createDiv();
+    actionButtons.id("action-buttons"); // Game boy action buttons
 
     let body = select('body');
 
@@ -44,7 +44,7 @@ function setup(){
     gameContainer.child(scoreContainer);
     gameContainer.child(canvas);
     buttonContainer.child(arrowButtons);
-    buttonContainer.child(actionbuttons);
+    buttonContainer.child(actionButtons);
 
     // Style for the Game Boy emulator container
     gameBoyEmulator.style("background-color", "#8b8b8b");
