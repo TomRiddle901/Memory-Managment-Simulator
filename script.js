@@ -117,11 +117,16 @@ function firstFit(){
 
 // Call algoritmo Best Fit
 function bestFit(){
-
+    allocateProcess("best");
 }
 
 // Call algoritmo worst fit
 function worstFit(){
+    allocateProcess("worst");
+}
+
+// Funzione unica che gestisce gli algoritmi
+function allocateProcess(algorithm){
 
 }
 
