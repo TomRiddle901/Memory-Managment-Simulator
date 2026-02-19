@@ -192,8 +192,23 @@ function allocateProcess(algorithm){
 }
 
 // Deallocazione di un processo
-function deallocation(){
+function deallocation(procName = null){
+    // se non specificato, rimuove ultimo processo allocato (non OS)
+    for (let i = ramBlocks.length - 1; i >= 0; i--){
+        let block = ramBlocks[i];
+        if(!block.free && block.process.name !== "Sistema Operativo"){
+            if (procName === null || block.process.name === procName){
+                block.free = true;
+                block.process = null;
+                block.color = [220, 220, 220];
+                mergeFreeBlocks();
+                updateCalculations("Processo deallocato");
+                return;
+            }
+        }
+    }
 
+    alert("Nessun processo da deallocare!");
 }
 
 // Unione dei buchi della RAM
