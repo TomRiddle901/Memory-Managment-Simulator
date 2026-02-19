@@ -23,7 +23,7 @@ function initRam(){
     osBlock.size = osSize;
     osBlock.free = false;
     osBlock.process = {
-        name: 'OS'
+        name: 'Sistema Operativo'
     }
     osBlock.color = [220, 220, 220];
 
@@ -39,6 +39,36 @@ function initRam(){
     ramBlocks.push(freeBlock); // Inserisco il blocco della memoria libera
 }
 
-function drawRam(){
+function drawRam() {
+    let ramX = 67;
+    let ramY = 40;
+    let ramW = 300;
+    let ramH = 600;
 
+    // Rettangolo principale RAM
+    stroke(0);
+    fill(255);
+    rect(ramX, ramY, ramW, ramH);
+
+    let currentY = ramY;
+
+    for (let i = 0; i < ramBlocks.length; i++){
+        let block = ramBlocks[i];
+
+        // Altezza in base alla dimensione del processo
+        let h = (block.size / ramSize) * ramH;
+
+        fill(block.color);
+        rect(ramX, currentY, ramW, h); // Rettangolo del processo
+
+        fill(0);
+        textSize(14);
+        if (block.free){
+            text("Libera - " + block.size + " MB", ramX + 10, currentY + 20); // Testo per quanta RAM libera rimane
+        }else{
+            text(block.process.name + " - " + block.size + " MB", ramX + 10, currentY + 20); // Testo per la dimensione del processo
+        }
+
+        currentY = currentY + h; // Scende sotto il processo aggiunto
+    }
 }
