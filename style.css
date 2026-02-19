@@ -55,3 +55,17 @@ section{
     border-radius: 10px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
+
+/* Input e select*/
+input[type="number"], select {
+    padding: 5px 8px;
+    margin-right: 10px;
+    border: 1px solid var(--input-border);
+    border-radius: 5px;
+    background-color: var(--input-bg);
+    color: var(--input-text);
+}
+
+input[type="number"]:focus, select:focus {
+    outline: 2px solid var(--accent-color);
+}
