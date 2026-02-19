@@ -219,24 +219,24 @@ function deallocation(procName = null){
 // Unione dei buchi della RAM
 function mergeFreeBlocks(){
     let i = 0;
-    while (i < ramBlocks.length - 1){
+    while(i < ramBlocks.length - 1){
         let current = ramBlocks[i];
-        let next = ramBlocks[i + 1];
+        let next = ramBlocks[i+1];
 
-        if (current.free && next.free){
-            // Unisci il blocco successivo in quello corrente
+        // Verifica che entrambi siano blocchi liberi
+        if(current.free === true && next.free === true){
+            // Unisci il prossimo blocco in quello corrente
             current.size += next.size;
 
-            // Rimuovi il blocco successivo dall'array
-            ramBlocks.splice(i + 1, 1);
+            // Rimuovi il blocco successivo
+            ramBlocks.splice(i+1, 1);
 
             // Non incrementare i, così controlla il nuovo "next"
         } else {
-            i++; // solo se non c'è unione
+            i++;
         }
     }
 }
-
 
 // Calcoli della memoria
 function updateCalculations(msg){
