@@ -1,136 +1,137 @@
-let cols = 20; // Game columns
-let rows = 15; // Game rows
-let gridSize = 20; // Dimension of grid
+// Game window settings
+let cols = 20;
+let rows = 15;
+let gridSize = 21;
+let winWidth = cols * gridSize;
+let winHeight = rows * gridSize;
 
-// Window dimension
-let winWidthSnake = cols * gridSize;
-let winHeightSnake = rows * gridSize;
-
-// Snake options and settings
-let food = {x: 0, y: 0};
+let food = { x: 0, y: 0 };
 let snake = {
     x: 0,
     y: 0,
     xSpeed: 0,
     ySpeed: 0,
-    body: []
+    body: [],
 };
-
-// Game settings
 let score = 0;
 let gamePaused = false;
 let gameOver = false;
 let gameStarted = false;
 let fps = 5;
 
-function drawFood(){
-    // Food cordinates
+function drawFood() { // Function for draw a square apple
     let x = food.x * gridSize;
     let y = food.y * gridSize;
-
-    // Food style
-    fill(255, 255, 0);
+    fill(255, 0, 0);
     square(x, y, gridSize);
 }
 
-function moveFood(){ // Move randomly the food
-    food.x = random(random(cols));
-    food.y = random(random(rows));
+function moveFood() {
+    // function for move the food into a random location
+    food.x = floor(random(cols));
+    food.y = floor(random(rows));
 }
 
-function resetSnake(){
-    // Start at the center
+function resetSnake() { // Function for reset the snake data
+    // Start at the center.
     snake.x = floor(cols / 2);
     snake.y = floor(rows / 2);
 
-    // Move the snake to the right
+    // Move to the right.
     snake.xSpeed = 1;
     snake.ySpeed = 0;
 
-    snake.body = []; // array to manage the body
+    // Array to manage the body.
+    snake.body = [];
 
-    let head = { // head segment
+    // Create a head segment.
+    let head = {
         x: snake.x,
-        y: snake.y
-    }
+        y: snake.y,
+    };
 
-    snake.body.push(head); // add the head to the body
+    snake.body.push(head); // Add the head to the body.
 }
 
-function checkEdges(){ // function for end the game when snake collides with an edge
+function checkEdges() { // End the game when snake collides the center
     // Right edge
-    if (snake.x === cols){
+    if (snake.x === cols) {
         gameOver = true;
         return;
     }
 
     // Left edge
-    if (snake.x === -1){
+    if (snake.x === -1) {
         gameOver = true;
         return;
     }
 
     // Top edge
-    if (snake.y === -1){
+    if (snake.y === -1) {
         gameOver = true;
         return;
     }
 
     // Bottom edge
-    if (snake.y === rows){
+    if (snake.y === rows) {
         gameOver = true;
         return;
     }
 }
 
-function moveSnake(){ // Moves snake foward
-    snake.x += snake.xSpeed;
-    snake.y += snake.ySpeed;
+function moveSnake() {
+    // Function for move the snake foward
+    snake.x = snake.x + snake.xSpeed;
+    snake.y = snake.y + snake.ySpeed;
 }
 
-function updateBody(){ // Update position of the snake body segments
-    // Update the end of the tail
-    for (let i = snake.body.length - 1; i > 0; i--){
+function updateBody() { // function for update the snake body segments position
+    // Update the end of the tail.
+    for (let i = snake.body.length - 1; i > 0; i -= 1) {
         snake.body[i].x = snake.body[i - 1].x;
         snake.body[i].y = snake.body[i - 1].y;
     }
 
-    // Update the head
+    // Update the head.
     snake.body[0].x = snake.x;
     snake.body[0].y = snake.y;
 }
 
-function drawSnake(){
-    fill(0, 255, 0); // snake color
-
-    for (let segment of snake.body){
+function drawSnake() {
+    // Function for draw the snake
+    fill(0, 255, 0);
+    for (let segment of snake.body) {
         let x = segment.x * gridSize;
         let y = segment.y * gridSize;
         square(x, y, gridSize);
     }
 }
 
-function changeDirection(xSpeed, ySpeed){
-    // Update the snake direction
+function changeDir(xSpeed, ySpeed) {
+    // Function for update the snake movement
     snake.xSpeed = xSpeed;
     snake.ySpeed = ySpeed;
 }
 
-function checkFood(){ // function for manage the snake diet
-    if (snake.x === food.x && snake.y === food.y){
-        let segment = {x: -1, y: -1};
-        snake.body.push(segment); // add a new segment of the body
+function checkFood() { // Function for manage the snake diet
+    if (snake.x === food.x && snake.y === food.y) {
+        // Add a new body segment.
+        let segment = { x: -1, y: -1 };
+        snake.body.push(segment);
 
-        score += 10; // update the score
+        // Update the score.
+        score += 10;
 
-        moveFood(); // regenerate new food on a random location
+        // Place the food in a random location.
+        moveFood();
     }
 }
 
-function checkSelf(){ // function for check self collision
-    for (let i = 1; i < snake.body.length; i += 1){
+function checkSelf() {
+    // Function for end the game when the sknake collides with the edges
+    for (let i = 1; i < snake.body.length; i += 1) {
         let segment = snake.body[i];
-        if (snake.x === segment.x && snake.y === segment.y){
+        if (snake.x === segment.x && snake.y === segment.y) {
             gameOver = true;
             return;
         }
@@ -138,86 +139,72 @@ function checkSelf(){ // function for check self collision
 }
 
 // Functions for button control
-function goUp(){
+function goUp() {
     snake.xSpeed = 0;
     snake.ySpeed = -1;
 }
 
-function goDown(){
+function goDown() {
     snake.xSpeed = 0;
     snake.ySpeed = 1;
 }
 
-function goLeft(){
+function goLeft() {
     snake.xSpeed = -1;
     snake.ySpeed = 0;
 }
 
-function goRight(){
+function goRight() {
     snake.xSpeed = 1;
     snake.ySpeed = 0;
 }
 
-function keyPressed(){ // Built-in p5.js function for keyboard buttons pressing
+function keyPressed() {// Built-in p5.js function for keyboard buttons pressing
     // ARROW control
-    if (keyCode === UP_ARROW){
+    if (keyCode === UP_ARROW) {
         goUp();
     }
-    if (keyCode === DOWN_ARROW){
+    if (keyCode === DOWN_ARROW) {
         goDown();
     }
-    if (keyCode === LEFT_ARROW){
+    if (keyCode === LEFT_ARROW) {
         goLeft();
     }
-    if (keyCode === RIGHT_ARROW){
-        goRight();
-    }
-
-    // WASD control
-    if (key === 'w' || key === 'W'){
-        goUp();
-    }
-    if (key === 's' || key === 'S'){
-        goDown();
-    }
-    if (key === 'a' || key === 'A'){
-        goLeft();
-    }
-    if (key === 'd' || key === 'D'){
+    if (keyCode === RIGHT_ARROW) {
         goRight();
     }
 }
 
-function startGame(){
+function startGame() {
     score = 0;
     gameStarted = true;
     gamePaused = false;
-    if (gameOver === true){
+    if (gameOver === true) {
         resetSnake();
         gameOver = false;
     }
     loop();
 }
 
-function pasueGame(){
+function pauseGame() {
     gamePaused = true;
 }
 
-function displayStartMessage(){
+function displayStartMessage() {
     // Display start message
-    textSize(16);
+    textSize(20);
     textAlign(CENTER);
     fill(255, 0, 0);
-    text('Premi ▶ per giocare', width / 2, height / 2);
+    text('Press ▶ to Start', width / 2, height / 2);
 }
 
-function displayEndMessage(){
+function displayEndMessage() {
     // Display end message
     background(0);
-    textSize(50);
+    textSize(40);
     textAlign(CENTER);
     fill(255, 0, 0);
-    text('Game Over', winWidthSnake / 2, height / 2);
+    text('Game Over', width / 2, height / 2);
     textSize(14);
-    text('Premi ▶ per giocare', width / 2, height / 2 + 50);
+    text('Press ▶ to Start', width / 2, height / 2 + 50);
 }
