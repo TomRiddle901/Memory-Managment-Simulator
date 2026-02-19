@@ -102,14 +102,15 @@ function addProcess(){
 
 // Mostra i processi in attesa
 function renderProcessList(){
-    let list = select("#processList").value;
-    list.innerHTML = ""; // Pulisce la lista
+    let list = document.getElementById("processList");
+    list.innerHTML = ""; // pulisce tutto
+
     for (let i = 0; i < processes.length; i++){
-        let li = createElement("li", processes[i].name + " - " + processes[i].size + " MB");
-        list.child(li);
+        let li = document.createElement("li");
+        li.textContent = processes[i].name + " - " + processes[i].size + " MB";
+        list.appendChild(li);
     }
 }
-
 // Call algoritmo First Fit
 function firstFit(){
     allocateProcess("first");
