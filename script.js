@@ -226,5 +226,12 @@ function mergeFreeBlocks(){
 
 // Calcoli della memoria
 function updateCalculations(msg){
-
+    let totalFree = 0;
+    for (let i = 0; i < ramBlocks.length; i++){
+        if (ramBlocks[i].free){
+            totalFree += ramBlocks[i].size;
+        }
+    }
+    let output = select("#calcolaOutput");
+    output.html(msg + "<br>Memoria libera totale: " + totalFree + " MB");
 }
