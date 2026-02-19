@@ -177,6 +177,7 @@ function allocateProcess(algorithm){
     }
 
     renderProcessList();
+    renderDeallocSelect();
     updateCalculations(proc.name + " allocato. Frammentazione: " + remaining + " MB");
 }
 
@@ -212,6 +213,7 @@ function deallocation(procName = null){
         }
     }
     alert("Nessun processo da deallocare!");
+    renderDeallocSelect();
 }
 
 // Unione dei buchi della RAM
