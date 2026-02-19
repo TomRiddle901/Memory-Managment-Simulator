@@ -124,3 +124,23 @@ function firstFit(){
 
     console.warn(proc.name + " NON allocato -> memoria insufficente");
 }
+
+// Algoritmo Best Fit
+function bestFit(){
+
+}
+
+// Algoritmo worst fit
+function worstFit(){
+
+}
+
+// Deallocazione di un processo
+function deallocation(){
+
+}
+
+// Unione dei buchi della RAM
+function mergeFreeBlocks(){
+
+}
