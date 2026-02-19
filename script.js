@@ -103,7 +103,7 @@ function addProcess(){
 // Mostra i processi in attesa
 function renderProcessList(){
     let list = select("#processList").value;
-    list.html(""); // Pulisce la lista
+    list.innerHTML = ""; // Pulisce la lista
     for (let i = 0; i < processes.length; i++){
         let li = createElement("li", processes[i].name + " - " + processes[i].size + " MB");
         list.child(li);
