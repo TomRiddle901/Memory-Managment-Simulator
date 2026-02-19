@@ -69,11 +69,11 @@ Non sono richieste installazioni aggiuntive.
 
 ---
 
-## 🚧 Stato del Progetto
+## Stato del Progetto
 
 Il progetto è attualmente:
 
-> ⚙️ **In sviluppo**
+>    **In sviluppo**
 
 Saranno aggiunte nuove funzionalità come:
 
