@@ -208,12 +208,12 @@ function deallocation(procName = null){
                 block.color = [220,220,220];
                 mergeFreeBlocks();
                 updateCalculations("Processo deallocato");
+                renderDeallocSelect();
                 return;
             }
         }
     }
     alert("Nessun processo da deallocare!");
-    renderDeallocSelect();
 }
 
 // Unione dei buchi della RAM
