@@ -43,8 +43,25 @@
     <!-- Sezione descrizione -->
     <section id="descrizione">
         <h2>Descrizione Tecnica</h2>
-        <p></p>
-        <p></p>
+        <p>La tecnica <strong>Dynamic Partitions</strong> prevede che la memoria RAM venga suddivisa dinamicamente solo quando un processo
+        deve essere caricato. Le partizioni hanno dimensione variabile e vengono create in base alle necessità del programma</p>
+
+        <p><strong>Vantaggio:</strong> utilizzo più efficiente della memoria, poiché ogni processo riceve uno spazio proporzionato
+        alle proprie esigenze.</p>
+        <p><strong>Svantaggio:</strong> comparsa di frammentazione interna.</p>
+
+        <p><strong>External Fragmentation:</strong><br> Si verifica quando la memoria libera è suddivisa in blocchi piccoli e non contigui.
+        Anche se la memoria totale libera è sufficiente, potrebbe non esistere un blocco abbastanza grande per contenere un nuovo processo.</p>
+        <p><strong>Internal Fragmentation:</strong><br> Quando un processo termina, il blocco di memoria occupato viene marcato come libero.
+        Questo può generare nuovi "buchi" nella RAM</p>
+
+        <p><strong>Algoritmi di allocazione:</strong>
+            <ul>
+                <li><b>First Fit:</b> assegna il primo blocco libero sufficientemente grande</li>
+                <li><b>Best Fit:</b> assegna il blocco libero più piccolo adatta</li>
+                <li><b>Worst Fit:</b> assegna il blocco libero più grande disponibile</li>
+            </ul>
+        </p>
     </section>
     <script src="script.js"></script>
 </body>
