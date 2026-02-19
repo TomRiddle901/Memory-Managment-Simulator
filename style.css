@@ -107,3 +107,8 @@ li{
     justify-content: center;
     margin-top: 15px;
 }
+
+/* Sezione per i calcoli */
+#calcoli p{
+    font-weight: bold;
+}
