@@ -85,3 +85,18 @@ button{
 button:hover{
     background-color: var(--button-hover);
 }
+
+/* Liste processi */
+ul{
+    background: var(--list-bg);
+    padding: 10px;
+    border-radius: 5px;
+    max-height: 150px;
+    overflow-y: auto;
+    margin-top: 10px;
+}
+
+li{
+    padding: 4px 8px;
+    border-bottom: 1px solid var(--section-border);
+}
