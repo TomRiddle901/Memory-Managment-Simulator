@@ -215,3 +215,8 @@ function deallocation(procName = null){
 function mergeFreeBlocks(){
 
 }
+
+// Calcoli della memoria
+function updateCalculations(msg){
+
+}
