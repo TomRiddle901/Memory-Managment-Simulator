@@ -23,7 +23,7 @@ function initRam(){
         ramSize = parseInt(inputRam);
     }
 
-    ramblocks = [];
+    ramBlocks = [];
 
     // Blocco del SO sempre occupato
     let osBlock = {}; // Oggetto blocco OS
