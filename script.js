@@ -164,6 +164,31 @@ function allocateProcess(algorithm){
         alert(proc.name + " NON allocato -> memoria insufficiente");
         return;
     }
+
+    let block = ramBlocks[index];
+    let remaining = block.size - proc.size;
+
+    // Blocco occupato
+    let usedBlock = {};
+    usedBlock.size = proc.size;
+    usedBlock.free = false;
+    usedBlock.process = proc.name;
+    usedBlock.color = [random(50,255), random(50,255), random(50,255)];
+
+    ramBlocks[index] = usedBlock;
+
+    // Blocco libero
+    if (remaining > 0){
+        let freeblock = {};
+        freeblock.size = remaining;
+        freeblock.free = true;
+        freeblock.process = null;
+        freeblock.color = [220, 220, 220];
+        ramBlocks.splice(index + 1, 0, freeblock);
+    }
+
+    updateCalculations(proc.name + " allocato. Frammentazione: " + remaining + " MB");
+    renderProcessList();
 }
 
 // Deallocazione di un processo
