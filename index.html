@@ -3,11 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Memory Manager Simulator</title>
+    <title>Memory Managment Simulator</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.js"></script> <!-- p5.js library -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <h1>Memory Managment Simulator - Dynamic Partitions</h1>
+
+    <!-- Sezione dei dati -->
+    <section id="dati">
+        <h2>Dati</h2>
+
+        <label>Dimensione RAM (MB):</label>
+        <input type="number" id="ramSize" value="512">
+
+        <label>Dimensione del processo</label>
+        <input type="number" id="procSize" value="50">
+
+        <button id="addProcess">Aggiungi processo</button>
+        <button id="allocate">Alloca</button>
+        <button id="reset">Reset</button>
+
+        <h3>Processi in attesa:</h3>
+        <ul id="processList"></ul>
+    </section>
     <script src="script.js"></script>
 </body>
 </html>
