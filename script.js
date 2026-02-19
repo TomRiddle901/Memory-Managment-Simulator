@@ -180,6 +180,22 @@ function allocateProcess(algorithm){
     updateCalculations(proc.name + " allocato. Frammentazione: " + remaining + " MB");
 }
 
+// Funzione per aggiornare il select con i processi allocati
+function renderDeallocSelect(){
+    let sel = document.getElementById("deallocProcess");
+    sel.innerHTML = '<option value="">Seleziona un processo</option>';
+
+    for (let i = 0; i < ramBlocks.length; i++){
+        let block = ramBlocks[i];
+        if (!block.free && block.process.name !== "Sistema Operativo"){
+            let option = document.createElement("option");
+            option.value = block.process.name;
+            option.textContent = block.process.name + " - " + block.size + " MB";
+            sel.appendChild(option);
+        }
+    }
+}
+
 // Deallocazione di un processo
 function deallocation(procName = null){
     for(let i = ramBlocks.length-1; i >=0; i--){
