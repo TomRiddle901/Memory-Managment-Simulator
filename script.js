@@ -84,12 +84,25 @@ function drawRam() {
     }
 }
 
-function addProcess(size){
+// Aggiungi un processo
+function addProcess(){
+    let inputSize = select("#procSize").value;
+    if (inputSize !== "" || parseInt(inputSize) <= 0){
+        alert("Inserisci dimensione del processo valida");
+        return;
+    }
+
     let proc = {}; // Oggetto processo
     proc.name = "P" + (processes.length + 1); // Nome del processo
-    proc.size = size; // Dimenzione del processo
-
+    proc.size = parseInt(inputSize); // Dimenzione del processo
     processes.push(proc); // Inserisci processo
+
+    renderProcessList();
+}
+
+// Mostra i processi in attesa
+function renderProcessList(){
+
 }
 
 // Algoritmo First Fit
