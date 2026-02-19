@@ -252,6 +252,15 @@ window.onload = function(){
         else{ alert("Seleziona un algoritmo valido"); }
     });
     select("#reset").mousePressed(()=>initRam());
+    document.getElementById("deallocBtn").addEventListener("click", ()=>{
+        let sel = document.getElementById("deallocProcess");
+        let procName = sel.value;
+        if (procName !== ""){
+            deallocation(procName);
+        }else{
+            alert("Seleziona un processo da deallocare");
+        }
+    });
 
     // Popola select algoritmi
     let sel = select("#allocationAlgorithm");
