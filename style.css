@@ -69,3 +69,19 @@ input[type="number"], select {
 input[type="number"]:focus, select:focus {
     outline: 2px solid var(--accent-color);
 }
+
+/* Bottoni */
+button{
+    padding: 8px 15px;
+    margin: 5px 2px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--button-bg);
+    color: var(--button-text);
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+button:hover{
+    background-color: var(--button-hover);
+}
