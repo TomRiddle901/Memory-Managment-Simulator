@@ -100,3 +100,10 @@ li{
     padding: 4px 8px;
     border-bottom: 1px solid var(--section-border);
 }
+
+/* Canvas container */
+#canvasContainer{
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
