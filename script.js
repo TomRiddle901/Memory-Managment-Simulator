@@ -17,7 +17,13 @@ function draw(){
 }
 
 function initRam(){
-    ramBlocks = [];
+    // Aggiorna dimensione RAM da input
+    let inputRam = select("#ramSize").value();
+    if (inputRam !== ""){
+        ramSize.parseInt(inputRam);
+    }
+
+    ramblocks = [];
 
     // Blocco del SO sempre occupato
     let osBlock = {}; // Oggetto blocco OS
@@ -38,6 +44,10 @@ function initRam(){
     freeBlock.color = [220, 220, 220];
 
     ramBlocks.push(freeBlock); // Inserisco il blocco della memoria libera
+
+    processes = [];
+    renderProcessList();
+    updateCalculations("Reset RAM completato!");
 }
 
 function drawRam() {
