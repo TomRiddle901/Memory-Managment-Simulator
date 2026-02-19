@@ -173,6 +173,20 @@ function keyPressed() {// Built-in p5.js function for keyboard buttons pressing
     if (keyCode === RIGHT_ARROW) {
         goRight();
     }
+
+    // WASD control
+    if (key === 'w' || key === 'W'){
+        goUp();
+    }
+    if (key === 's' || key === 'S'){
+        goDown();
+    }
+    if (key === 'a' || key === 'A'){
+        goLeft();
+    }
+    if (key === 'd' || key === 'D'){
+        goRight();
+    }
 }
 
 function startGame() {
