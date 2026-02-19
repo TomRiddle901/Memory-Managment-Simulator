@@ -102,59 +102,25 @@ function addProcess(){
 
 // Mostra i processi in attesa
 function renderProcessList(){
-
+    let list = select("#processList").value;
+    list.html(""); // Pulisce la lista
+    for (let i = 0; i < processes.length; i++){
+        let li = createElement("li", processes[i].name + " - " + processes[i].size + " MB");
+        list.child(li);
+    }
 }
 
-// Algoritmo First Fit
+// Call algoritmo First Fit
 function firstFit(){
-    if (processes.length === 0){
-        console.warn("Nessun processo");
-        return;
-    }
-
-    let proc = processes.shift(); // Prende il primo elemento dall'array
-
-    for (let i = 0; i < ramBlocks.length; i++){
-        let block = ramBlocks[i];
-
-        if (block.free && block.size >= proc.size){
-            let remaining = block.size - proc.size;
-
-            // Blocco occupato
-            let usedBlock = {};
-            usedBlock.size = proc.size;
-            usedBlock.free = false;
-            usedBlock.process = proc;
-            usedBlock.color = [random(50, 255), random(50, 255), random(50, 255)];
-
-            // sostituisce il blocco libero
-            ramBlocks[i] = usedBlock;
-
-            // Nuovo blocco libero se rimane spazio
-            if (remaining > 0){
-                let freeBlock = {};
-                freeBlock.size = remaining;
-                freeBlock.free = true;
-                freeBlock.process = null;
-                freeBlock.color = [220, 220, 220];
-
-                ramBlocks.splice(i + 1, 0, freeBlock);
-            }
-
-            console.log("Allocato: " + proc.name + " Frammentazione: " + remaining + " MB");
-            return;
-        }
-    }
-
-    console.warn(proc.name + " NON allocato -> memoria insufficente");
+    allocateProcess("first");
 }
 
-// Algoritmo Best Fit
+// Call algoritmo Best Fit
 function bestFit(){
 
 }
 
-// Algoritmo worst fit
+// Call algoritmo worst fit
 function worstFit(){
 
 }
