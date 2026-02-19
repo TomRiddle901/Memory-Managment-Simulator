@@ -86,8 +86,8 @@ function drawRam() {
 
 // Aggiungi un processo
 function addProcess(){
-    let inputSize = select("#procSize").value;
-    if (inputSize !== "" || parseInt(inputSize) <= 0){
+    let inputSize = select("#procSize").value();
+    if (inputSize === "" || parseInt(inputSize) <= 0){
         alert("Inserisci dimensione del processo valida");
         return;
     }
