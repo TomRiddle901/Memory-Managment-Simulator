@@ -20,7 +20,7 @@ function initRam(){
     // Aggiorna dimensione RAM da input
     let inputRam = select("#ramSize").value();
     if (inputRam !== ""){
-        ramSize.parseInt(inputRam);
+        ramSize = parseInt(inputRam);
     }
 
     ramblocks = [];
