@@ -127,7 +127,43 @@ function worstFit(){
 
 // Funzione unica che gestisce gli algoritmi
 function allocateProcess(algorithm){
+    if (processes.length === 0){
+        alert("Nessun processo in attesa");
+        return;
+    }
 
+    let proc = processes.shift();
+    let index = -1;
+
+    if (algorithm === "first"){
+        // Primo blocco libero sufficente
+        for (let i = 0; i < ramBlocks.length; i++){
+            if (ramBlocks[i].free && ramBlocks[i].size >= proc.size){
+                index = i;
+            }
+        }
+    }else if (algorithm === "best"){
+        let minSize = Infinity; // Non è null ma neanche un numero quindi infinity è il top
+        for (let i = 0; i < ramBlocks.length; i++){
+            if (ramBlocks[i].free && ramBlocks[i].size >= proc.size && ramBlocks[i].size < minSize){
+                minSize = ramBlocks[i].size;
+                index = i;
+            }
+        }
+    }else if (algorithm === "worst"){
+        let maxSize = -1;
+        for (let i = 0; i < ramBlocks.length; i++){
+            if (ramBlocks[i].free && ramBlocks[i].size >= proc.size && ramBlocks[i] > maxSize){
+                maxSize = ramBlocks[i].size;
+                index = i;
+            }
+        }
+    }
+
+    if (index === -1){
+        alert(proc.name + " NON allocato -> memoria insufficiente");
+        return;
+    }
 }
 
 // Deallocazione di un processo
