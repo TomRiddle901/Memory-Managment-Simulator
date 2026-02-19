@@ -14,23 +14,24 @@
     <section id="dati">
         <h2>Dati</h2>
 
-        <label>Dimensione RAM (MB):</label>
+        <label for="ramSize">Dimensione RAM (MB):</label>
         <input type="number" id="ramSize" value="512">
-
-        <label>Dimensione del processo</label>
+        <br>
+        <label for="procSize">Dimensione del processo:</label>
         <input type="number" id="procSize" value="50">
-
-        <select id="allocationAlgorithm">Seleziona un algoritmo di allocazione</select>
-
-        <button id="addProcess">Aggiungi processo</button>
-        <button id="allocate">Alloca</button>
-        <button id="reset">Reset</button>
-
-        <label>Dealloca processo:</label>
+        <br>
+        <label for="allocationAlgorithm">Algoritmo di allocazione:</label>
+        <select id="allocationAlgorithm"></select>
+        <br>
+        <label for="deallocProcess">Dealloca processo:</label>
         <select id="deallocProcess">
             <option value="">Seleziona un processo</option>
         </select>
+        <br>
+        <button id="addProcess">Aggiungi processo</button>
+        <button id="allocate">Alloca</button>
         <button id="deallocBtn">Dealloca</button>
+        <button id="reset">Reset</button>
 
         <h3>Processi in attesa:</h3>
         <ul id="processList"></ul>
