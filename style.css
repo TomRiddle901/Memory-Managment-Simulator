@@ -112,3 +112,9 @@ li{
 #calcoli p{
     font-weight: bold;
 }
+
+/* Select deallocazione */
+#deallocProcess{
+    padding: 5px;
+    margin-right: 10px;
+}
