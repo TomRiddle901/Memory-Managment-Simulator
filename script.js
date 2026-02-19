@@ -7,7 +7,7 @@ let osSize = 30; // Dimenzione del Sistema Operativo caricato in RAM
 
 function setup(){
     createCanvas(1520, 700);
-    canvas.parent("canvasContainer");
+    select("#canvasContainer").child(canvas);
     initRam();
 }
 
