@@ -72,3 +72,11 @@ function drawRam() {
         currentY = currentY + h; // Scende sotto il processo aggiunto
     }
 }
+
+function addProcess(size){
+    let proc = {}; // Oggetto processo
+    proc.name = "P" + (processes.length + 1); // Nome del processo
+    proc.size = size; // Dimenzione del processo
+
+    processes.push(proc); // Inserisci processo
+}
