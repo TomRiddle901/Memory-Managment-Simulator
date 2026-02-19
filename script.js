@@ -213,7 +213,15 @@ function deallocation(procName = null){
 
 // Unione dei buchi della RAM
 function mergeFreeBlocks(){
-
+    for (let i = 0; i < ramBlocks.length - 1; i++){
+        let current = ramBlocks[i];
+        let next = ramBlocks[i + 1];
+        if (current.free && next.free){
+            current.size += next.size;
+            ramBlocks.splice(i + 1, 1);
+            i--; // ricontrolla il nuovo blocco unito
+        }
+    }
 }
 
 // Calcoli della memoria
