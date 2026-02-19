@@ -32,3 +32,26 @@
         --list-bg: #2a2a2a;
     }
 }
+
+/* Generale */
+body{
+    background-color: var(--bg-body);
+    color: var(--text-color);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+h1{
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+section{
+    background-color: var(--section-bg);
+    border: 1px solid var(--section-border);
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
