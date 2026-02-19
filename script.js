@@ -235,3 +235,27 @@ function updateCalculations(msg){
     let output = select("#calcolaOutput");
     output.html(msg + "<br>Memoria libera totale: " + totalFree + " MB");
 }
+
+// Pulsanti pagina HTML
+window.onload = function(){
+    select("#addProcess").mousePressed(()=>addProcess());
+    select("#allocate").mousePressed(()=>{
+        let algo = select("#allocationAlgorithm").value();
+        if (algo === "first"){
+            firstFit();
+        }else if (algo === "best"){
+            bestFit();
+        }else if (algo === "worst"){
+            worstFit();
+        }else{
+            alert("Seleziona un algoritmo valido");
+        }
+    });
+    select("#reset").mousePressed(()=>initRam());
+
+    // Popola select algoritmi
+    let sel = select("#allocationAlgorithm");
+    sel.option("First Fit", "first");
+    sel.option("Best Fit", "best");
+    sel.option("Worst Fit", "worst");
+}
