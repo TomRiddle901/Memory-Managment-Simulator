@@ -19,8 +19,10 @@ function draw(){
 function initRam(){
     // Aggiorna dimensione RAM
     let inputRam = select("#ramSize").value();
-    if(inputRam !== ""){
+    if(inputRam !== "" && inputRam > 30){
         ramSize = parseInt(inputRam);
+    }else{
+        alert("Inserici un valore valido > 30!");
     }
 
     ramBlocks = [];

@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d19cb547-78fd-4d86-ba23-b45009c716f8" name="Changes" comment="Changed text color using the funcion getContrastColor()">
+    <list default="true" id="d19cb547-78fd-4d86-ba23-b45009c716f8" name="Changes" comment="Added bold decoration to the text">
       <change beforePath="$PROJECT_DIR$/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/script.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -105,15 +105,7 @@
       <workItem from="1771513601687" duration="14010000" />
       <workItem from="1771531687380" duration="78000" />
       <workItem from="1771532090615" duration="2987000" />
-      <workItem from="1771610915024" duration="2162000" />
-    </task>
-    <task id="LOCAL-00093" summary="Implemented First Fit algorithm for process allocation in RAM">
-      <option name="closed" value="true" />
-      <created>1771520431010</created>
-      <option name="number" value="00093" />
-      <option name="presentableId" value="LOCAL-00093" />
-      <option name="project" value="LOCAL" />
-      <updated>1771520431010</updated>
+      <workItem from="1771610915024" duration="2764000" />
     </task>
     <task id="LOCAL-00094" summary="Added the function for the other algorithms, deallocation of a process and merge of free RAM blocks">
       <option name="closed" value="true" />
@@ -499,7 +491,15 @@
       <option name="project" value="LOCAL" />
       <updated>1771613040473</updated>
     </task>
-    <option name="localTasksCounter" value="142" />
+    <task id="LOCAL-00142" summary="Added bold decoration to the text">
+      <option name="closed" value="true" />
+      <created>1771613652242</created>
+      <option name="number" value="00142" />
+      <option name="presentableId" value="LOCAL-00142" />
+      <option name="project" value="LOCAL" />
+      <updated>1771613652242</updated>
+    </task>
+    <option name="localTasksCounter" value="143" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -517,7 +517,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Working reset RAM" />
     <MESSAGE value="Corrected some syntax errors, logical errors and critical errors" />
     <MESSAGE value="Implemented label, select and button for deallocate a process" />
     <MESSAGE value="Implemented a function for update the selectf for dealocation" />
@@ -542,6 +541,7 @@
     <MESSAGE value="Added decoration to RAM blocks" />
     <MESSAGE value="Implemented a function for get the constrast color" />
     <MESSAGE value="Changed text color using the funcion getContrastColor()" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changed text color using the funcion getContrastColor()" />
+    <MESSAGE value="Added bold decoration to the text" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added bold decoration to the text" />
   </component>
 </project>
