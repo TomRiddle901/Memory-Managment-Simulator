@@ -87,7 +87,13 @@ function drawRam() {
         rect(ramX, currentY, ramW, h);
 
         // Testo
-        fill(255);
+        let textColor;
+        if (block.free){
+            textColor = 255; // Blocco libero scuro -> testo chiaro
+        }else{
+            textColor = getContrastColor(block.color);
+        }
+        fill(textColor);
         textSize(14);
         textAlign(LEFT, CENTER);
         let label = "";
