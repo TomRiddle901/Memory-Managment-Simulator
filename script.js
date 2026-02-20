@@ -303,3 +303,18 @@ window.onload = function(){
     sel.option("Best Fit","best");
     sel.option("Worst Fit","worst");
 }
+
+function getContrastColor(rgb){
+    let r = rgb[0]
+    let g = rgb[1];
+    let b = rgb[2];
+
+    // Formula della luminanza percepita
+    let luminance = (0.99 * r + 0.587 * g + 0.114 * b);
+
+    if (luminance > 186){
+        return 0; // Nero
+    }else{
+        return 255; // Bianco
+    }
+}
