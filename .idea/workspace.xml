@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d19cb547-78fd-4d86-ba23-b45009c716f8" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+    <list default="true" id="d19cb547-78fd-4d86-ba23-b45009c716f8" name="Changes" comment="upodated VCS and worksapce xml">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/script.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,23 +106,7 @@
       <workItem from="1771513601687" duration="14010000" />
       <workItem from="1771531687380" duration="78000" />
       <workItem from="1771532090615" duration="2987000" />
-      <workItem from="1771610915024" duration="507000" />
-    </task>
-    <task id="LOCAL-00088" summary="Added the description of the algorithm">
-      <option name="closed" value="true" />
-      <created>1771518013356</created>
-      <option name="number" value="00088" />
-      <option name="presentableId" value="LOCAL-00088" />
-      <option name="project" value="LOCAL" />
-      <updated>1771518013356</updated>
-    </task>
-    <task id="LOCAL-00089" summary="Implemented function draw, initRam, drawRam and refracored variables">
-      <option name="closed" value="true" />
-      <created>1771518440379</created>
-      <option name="number" value="00089" />
-      <option name="presentableId" value="LOCAL-00089" />
-      <option name="project" value="LOCAL" />
-      <updated>1771518440379</updated>
+      <workItem from="1771610915024" duration="1260000" />
     </task>
     <task id="LOCAL-00090" summary="Added RAM initialization with OS lock and free memory">
       <option name="closed" value="true" />
@@ -499,7 +484,23 @@
       <option name="project" value="LOCAL" />
       <updated>1771535078845</updated>
     </task>
-    <option name="localTasksCounter" value="137" />
+    <task id="LOCAL-00137" summary="added lang attribute">
+      <option name="closed" value="true" />
+      <created>1771611431116</created>
+      <option name="number" value="00137" />
+      <option name="presentableId" value="LOCAL-00137" />
+      <option name="project" value="LOCAL" />
+      <updated>1771611431117</updated>
+    </task>
+    <task id="LOCAL-00138" summary="upodated VCS and worksapce xml">
+      <option name="closed" value="true" />
+      <created>1771611524435</created>
+      <option name="number" value="00138" />
+      <option name="presentableId" value="LOCAL-00138" />
+      <option name="project" value="LOCAL" />
+      <updated>1771611524435</updated>
+    </task>
+    <option name="localTasksCounter" value="139" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -517,8 +518,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Change canvas positioning in the canvasContainer div using select().child()" />
-    <MESSAGE value="Fix RAM size assignment: Correct use of parseInt" />
     <MESSAGE value="Fix process list cleanup: use innerHTML instead of list.html()" />
     <MESSAGE value="Corrected logic of condition" />
     <MESSAGE value="Correct cleaning of the list" />
@@ -542,6 +541,8 @@
     <MESSAGE value="Improved form structure: label-for association, tidy layout and control reorganization" />
     <MESSAGE value="README refactor: improved readability, added emojis, details on features, technologies, and educational purpose" />
     <MESSAGE value="Removed IntelliJ Idea folder (is a web page not a Java project)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Removed IntelliJ Idea folder (is a web page not a Java project)" />
+    <MESSAGE value="added lang attribute" />
+    <MESSAGE value="upodated VCS and worksapce xml" />
+    <option name="LAST_COMMIT_MESSAGE" value="upodated VCS and worksapce xml" />
   </component>
 </project>

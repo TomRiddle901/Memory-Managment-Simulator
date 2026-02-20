@@ -55,9 +55,15 @@ function drawRam() {
     let ramW = 300;
     let ramH = 600;
 
+    // Cornice RAM
+    strokeWeight(2);
     stroke(0);
+    fill(30);
+    rect(ramX - 5, ramY - 5, ramW + 10, ramH + 10, 10);
+
+    // Sfondo RAM
     fill(255);
-    rect(ramX, ramY, ramW, ramH);
+    rect(ramX, ramY, ramW, ramH, 8);
 
     let currentY = ramY;
 
@@ -65,16 +71,36 @@ function drawRam() {
         let block = ramBlocks[i];
         let h = (block.size / ramSize) * ramH;
 
-        fill(block.color);
+        // Ombra blocco
+        noStroke();
+        fill(0, 0, 0, 40);
+        rect(ramX + 3, currentY + 3, ramW, h, 3);
+
+        // Blocco principale
+        stroke(0);
+        strokeWeight(1);
+        if (block.free){
+            fill(70); // Colore del blocco libero
+        }else{
+            fill(block.color);
+        }
         rect(ramX, currentY, ramW, h);
 
-        fill(0);
+        // Testo
+        fill(255);
         textSize(14);
+        textAlign(LEFT, CENTER);
+        let label = "";
         if (block.free){
-            text("Libera - " + block.size + " MB", ramX + 10, currentY + 20);
+            label = "Libera - " + block.size + " MB";
         } else {
-            text(block.process.name + " - " + block.size + " MB", ramX + 10, currentY + 20);
+            label = block.process.name + " - " + block.size + " MB";
         }
+        text(label, ramX + 10, currentY + h / 2);
+
+        // Linea spaziatrice
+        stroke(0, 80);
+        line(ramX, currentY, ramX + ramW, currentY);
 
         currentY += h;
     }
