@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d19cb547-78fd-4d86-ba23-b45009c716f8" name="Changes" comment="upodated VCS and worksapce xml">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="d19cb547-78fd-4d86-ba23-b45009c716f8" name="Changes" comment="Changed text color using the funcion getContrastColor()">
       <change beforePath="$PROJECT_DIR$/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/script.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -106,31 +105,7 @@
       <workItem from="1771513601687" duration="14010000" />
       <workItem from="1771531687380" duration="78000" />
       <workItem from="1771532090615" duration="2987000" />
-      <workItem from="1771610915024" duration="1260000" />
-    </task>
-    <task id="LOCAL-00090" summary="Added RAM initialization with OS lock and free memory">
-      <option name="closed" value="true" />
-      <created>1771518950436</created>
-      <option name="number" value="00090" />
-      <option name="presentableId" value="LOCAL-00090" />
-      <option name="project" value="LOCAL" />
-      <updated>1771518950437</updated>
-    </task>
-    <task id="LOCAL-00091" summary="Added RAM view with proportional blocks">
-      <option name="closed" value="true" />
-      <created>1771519582350</created>
-      <option name="number" value="00091" />
-      <option name="presentableId" value="LOCAL-00091" />
-      <option name="project" value="LOCAL" />
-      <updated>1771519582350</updated>
-    </task>
-    <task id="LOCAL-00092" summary="Implemented addProcess function to create and insert new processes">
-      <option name="closed" value="true" />
-      <created>1771519769057</created>
-      <option name="number" value="00092" />
-      <option name="presentableId" value="LOCAL-00092" />
-      <option name="project" value="LOCAL" />
-      <updated>1771519769057</updated>
+      <workItem from="1771610915024" duration="2162000" />
     </task>
     <task id="LOCAL-00093" summary="Implemented First Fit algorithm for process allocation in RAM">
       <option name="closed" value="true" />
@@ -500,7 +475,31 @@
       <option name="project" value="LOCAL" />
       <updated>1771611524435</updated>
     </task>
-    <option name="localTasksCounter" value="139" />
+    <task id="LOCAL-00139" summary="Added decoration to RAM blocks">
+      <option name="closed" value="true" />
+      <created>1771612553048</created>
+      <option name="number" value="00139" />
+      <option name="presentableId" value="LOCAL-00139" />
+      <option name="project" value="LOCAL" />
+      <updated>1771612553049</updated>
+    </task>
+    <task id="LOCAL-00140" summary="Implemented a function for get the constrast color">
+      <option name="closed" value="true" />
+      <created>1771612757275</created>
+      <option name="number" value="00140" />
+      <option name="presentableId" value="LOCAL-00140" />
+      <option name="project" value="LOCAL" />
+      <updated>1771612757276</updated>
+    </task>
+    <task id="LOCAL-00141" summary="Changed text color using the funcion getContrastColor()">
+      <option name="closed" value="true" />
+      <created>1771613040472</created>
+      <option name="number" value="00141" />
+      <option name="presentableId" value="LOCAL-00141" />
+      <option name="project" value="LOCAL" />
+      <updated>1771613040473</updated>
+    </task>
+    <option name="localTasksCounter" value="142" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -518,9 +517,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Fix process list cleanup: use innerHTML instead of list.html()" />
-    <MESSAGE value="Corrected logic of condition" />
-    <MESSAGE value="Correct cleaning of the list" />
     <MESSAGE value="Working reset RAM" />
     <MESSAGE value="Corrected some syntax errors, logical errors and critical errors" />
     <MESSAGE value="Implemented label, select and button for deallocate a process" />
@@ -543,6 +539,9 @@
     <MESSAGE value="Removed IntelliJ Idea folder (is a web page not a Java project)" />
     <MESSAGE value="added lang attribute" />
     <MESSAGE value="upodated VCS and worksapce xml" />
-    <option name="LAST_COMMIT_MESSAGE" value="upodated VCS and worksapce xml" />
+    <MESSAGE value="Added decoration to RAM blocks" />
+    <MESSAGE value="Implemented a function for get the constrast color" />
+    <MESSAGE value="Changed text color using the funcion getContrastColor()" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changed text color using the funcion getContrastColor()" />
   </component>
 </project>

@@ -93,6 +93,7 @@ function drawRam() {
         }else{
             textColor = getContrastColor(block.color);
         }
+        textStyle(BOLD);
         fill(textColor);
         textSize(14);
         textAlign(LEFT, CENTER);
