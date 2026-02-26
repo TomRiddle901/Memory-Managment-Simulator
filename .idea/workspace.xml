@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d19cb547-78fd-4d86-ba23-b45009c716f8" name="Changes" comment="Corrected a wrong typo" />
+    <list default="true" id="d19cb547-78fd-4d86-ba23-b45009c716f8" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -103,15 +105,8 @@
       <workItem from="1771513601687" duration="14010000" />
       <workItem from="1771531687380" duration="78000" />
       <workItem from="1771532090615" duration="2987000" />
-      <workItem from="1771610915024" duration="4958000" />
-    </task>
-    <task id="LOCAL-00097" summary="RAM initialization from input with OS lock and free memory, process list reset">
-      <option name="closed" value="true" />
-      <created>1771521141977</created>
-      <option name="number" value="00097" />
-      <option name="presentableId" value="LOCAL-00097" />
-      <option name="project" value="LOCAL" />
-      <updated>1771521141977</updated>
+      <workItem from="1771610915024" duration="5297000" />
+      <workItem from="1772101001728" duration="13000" />
     </task>
     <task id="LOCAL-00098" summary="Function to add process from input and update process list">
       <option name="closed" value="true" />
@@ -497,7 +492,15 @@
       <option name="project" value="LOCAL" />
       <updated>1771615883793</updated>
     </task>
-    <option name="localTasksCounter" value="146" />
+    <task id="LOCAL-00146" summary="Setted workspace better (WebStorm automatic changes)">
+      <option name="closed" value="true" />
+      <created>1771616164197</created>
+      <option name="number" value="00146" />
+      <option name="presentableId" value="LOCAL-00146" />
+      <option name="project" value="LOCAL" />
+      <updated>1771616164197</updated>
+    </task>
+    <option name="localTasksCounter" value="147" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -515,7 +518,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added renderDeallocSelect  on required functions" />
     <MESSAGE value="Connected the button deallocate on JavaScript file and deallocation() function" />
     <MESSAGE value="Wrong position for called function" />
     <MESSAGE value="Corrected merge of free blocks after removing a process" />
@@ -540,6 +542,7 @@
     <MESSAGE value="Corrected if statement and added alert for bad input" />
     <MESSAGE value="Changed canvas dimension" />
     <MESSAGE value="Corrected a wrong typo" />
-    <option name="LAST_COMMIT_MESSAGE" value="Corrected a wrong typo" />
+    <MESSAGE value="Setted workspace better (WebStorm automatic changes)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Setted workspace better (WebStorm automatic changes)" />
   </component>
 </project>
