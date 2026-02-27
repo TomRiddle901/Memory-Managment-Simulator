@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d19cb547-78fd-4d86-ba23-b45009c716f8" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="d19cb547-78fd-4d86-ba23-b45009c716f8" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -107,6 +105,7 @@
       <workItem from="1771532090615" duration="2987000" />
       <workItem from="1771610915024" duration="5297000" />
       <workItem from="1772101001728" duration="13000" />
+      <workItem from="1772183491572" duration="58000" />
     </task>
     <task id="LOCAL-00098" summary="Function to add process from input and update process list">
       <option name="closed" value="true" />
